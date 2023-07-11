@@ -18,10 +18,3 @@ body{
     margin: 0.4rem;
     background-color: var(--color-primary);
 }
-
-/* 
-Media Screen 
-Compact: width < 600 - navbar botton, cart icon
-Medium: 600 < width < 840 navbar hide left, navbar cart botton
-Expanded: 840 < width navbar expanded left, navbar cart botton
-*/

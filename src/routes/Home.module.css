@@ -1,0 +1,130 @@
+/* Mobile S */
+.home {
+    margin: 0 auto;
+    width: 98%;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+  .logo img {
+    padding-left: 1rem;
+    width: 15rem;
+  }
+  .text {
+    text-align: center;
+    color: var(--color-white);
+  }
+  .text h3 {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 1.8rem;
+  }
+  .text p {
+    margin-top: -1rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+  }
+  .btn {
+    text-align: center;
+    margin: 2rem 0 4.5rem;
+  }
+  .btn a {
+    font-family: var(--font-primary);
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    padding: 0.8rem 4rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+  }
+  .btn a:hover {
+    background-color: #7a3e11c0;
+  }
+  /* Mobile M and L*/
+  @media (min-width: 375px) {
+    .home {
+      height: 45rem;
+      justify-content: space-around;
+    }
+    .logo img {
+      width: 15rem;
+    }
+    .text h3 {
+      font-size: 2rem;
+    }
+    .text p {
+      font-size: 1rem;
+    }
+    .btn a {
+      border-radius: 75px;
+      font-size: 1.5rem;
+    }
+  }
+  /* Tablet */
+  @media (min-width: 765px) {
+    .home {
+      height: 45.5rem;
+      justify-content: space-around;
+    }
+    .logo{
+      margin-bottom: -3rem;
+    }
+    .logo img {
+      width: 28rem;
+    }
+    .text h3 {
+      font-size: 3rem;
+    }
+    .text p {
+      font-size: 2rem;
+    }
+    .btn a {
+      border-radius: 75px;
+      font-size: 2rem;
+    }
+  }
+  /* Laptop L */
+  @media (min-width: 1440px) {
+    .home {
+      height: 45.5rem;
+      justify-content: space-around;
+    }
+    .logo img {
+      width: 28rem;
+    }
+    .text h3 {
+      font-size: 3rem;
+    }
+    .text p {
+      font-size: 2rem;
+    }
+    .btn a {
+      border-radius: 75px;
+      font-size: 3rem;
+    }
+  }
+  /* 4k screen */
+  @media (min-width: 2560px) {
+    .home {
+      height: 45.5rem;
+    }
+    .logo img {
+      width: 28rem;
+    }
+    .text h3 {
+      font-size: 4rem;
+    }
+    .text p {
+      margin-top: -3.5rem;
+      font-size: 3rem;
+    }
+    .btn a {
+      border-radius: 75px;
+      font-size: 4rem;
+    }
+  }
