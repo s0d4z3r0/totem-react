@@ -1,0 +1,39 @@
+.menuItens {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 8%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.2rem;
+  background-color: var(--color-black);
+  border-bottom: 1px solid var(--color-gray);
+}
+.itens {
+  display: flex;
+  overflow-x: scroll;
+}
+.itens::-webkit-scrollbar{
+    display: none;
+}
+.itens{
+    -ms-overflow-style: none;
+}
+.item {
+  margin: 0 1rem;
+  white-space: nowrap;
+}
+
+.item a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+.item a p {
+    font-family: var(--font-secondary);
+  margin: 0.5rem;
+}
+.active {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(-color-primary);
+}

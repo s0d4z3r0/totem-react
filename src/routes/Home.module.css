@@ -2,7 +2,7 @@
 .home {
     margin: 0 auto;
     width: 98%;
-    height: 45rem;
+    height: 41rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,7 +13,7 @@
   }
   .logo img {
     padding-left: 1rem;
-    width: 15rem;
+    width: 18rem;
   }
   .text {
     text-align: center;
@@ -25,7 +25,6 @@
     font-size: 1.8rem;
   }
   .text p {
-    margin-top: -1rem;
     font-family: var(--font-secondary);
     font-size: 1rem;
   }
@@ -39,7 +38,7 @@
     color: var(--color-white);
     background-color: var(--color-secondary);
     padding: 0.8rem 4rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 25px;
   }
   .btn a:hover {
@@ -48,11 +47,11 @@
   /* Mobile M and L*/
   @media (min-width: 375px) {
     .home {
-      height: 45rem;
+      height: 41rem;
       justify-content: space-around;
     }
     .logo img {
-      width: 15rem;
+      width: 21rem;
     }
     .text h3 {
       font-size: 2rem;
@@ -65,10 +64,17 @@
       font-size: 1.5rem;
     }
   }
+  /* Mobile M and L*/
+  @media (min-width: 375px) and (min-height: 844px) {
+    .home {
+      height: 52.5rem;
+      justify-content: space-around;
+    }
+  }
   /* Tablet */
   @media (min-width: 765px) {
     .home {
-      height: 45.5rem;
+      height: 73rem;
       justify-content: space-around;
     }
     .logo{
@@ -86,6 +92,25 @@
     .btn a {
       border-radius: 75px;
       font-size: 2rem;
+    }
+  }
+  /* Tablet */
+  @media (min-width: 765px) and (min-height: 1368px) {
+    .home {
+      height: 85rem;
+    }
+    .logo img {
+      width: 38rem;
+    }
+    .text h3 {
+      font-size: 4rem;
+    }
+    .text p {
+      font-size: 3rem;
+    }
+    .btn a {
+      border-radius: 75px;
+      font-size: 3rem;
     }
   }
   /* Laptop L */
@@ -120,7 +145,6 @@
       font-size: 4rem;
     }
     .text p {
-      margin-top: -3.5rem;
       font-size: 3rem;
     }
     .btn a {

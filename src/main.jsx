@@ -10,7 +10,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import Home from './routes/Home.jsx'
 import Menu from './routes/Menu.jsx'
-import Cart from './routes/Cart.jsx'
 import ErrorPage from './routes/ErrorPage'
 
 const router = createBrowserRouter([
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
       {
         path: 'totem-react/menu',
         element: <Menu/>
-      },
-      {
-        path: 'totem-react/cart',
-        element: <Cart/>
       }
     ]
   },

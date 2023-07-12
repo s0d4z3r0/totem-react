@@ -5,16 +5,19 @@
     --color-secondary: #7A3F11;
     --color-tertiary: #FBAB6E;
     --color-quaternary: #C7661C;
+    --color-gray:rgb(48, 48, 48);
     --color-black: #0f0f0f;
     --color-white: #f7f7f7;
     --font-primary: 'Caprasimo', cursive;
     --font-secondary: 'Titillium Web', sans-serif;
     --font-handwriting: 'Indie Flower', cursive;
 }
-html{
-    height: 100vh;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    margin: 0.4rem;
     background-color: var(--color-primary);
 }

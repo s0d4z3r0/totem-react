@@ -1,0 +1,29 @@
+.menu{
+    z-index: -1;
+    height: 40.8rem;
+    background-color: var(--color-black);
+}
+ /* Mobile M and L*/
+ @media (min-width: 375px) {
+
+  }
+  /* Mobile M and L*/
+  @media (min-width: 375px) and (min-height: 844px) {
+
+  }
+  /* Tablet */
+  @media (min-width: 765px) {
+
+  }
+  /* Tablet */
+  @media (min-width: 765px) and (min-height: 1368px) {
+
+  }
+  /* Laptop L */
+  @media (min-width: 1440px) {
+
+  }
+  /* 4k screen */
+  @media (min-width: 2560px) {
+
+  }
