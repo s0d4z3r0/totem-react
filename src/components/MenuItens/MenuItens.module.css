@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  top: 8%;
+  top: 7.5%;
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.2rem;
@@ -14,26 +14,18 @@
   overflow-x: scroll;
 }
 .itens::-webkit-scrollbar{
-    display: none;
+    display: hidden;
 }
 .itens{
     -ms-overflow-style: none;
 }
 .item {
-  margin: 0 1rem;
+  margin: 0.5rem 2rem;
   white-space: nowrap;
 }
-
 .item a {
   text-decoration: none;
   color: var(--color-white);
   font-size: 1.2rem;
-}
-.item a p {
-    font-family: var(--font-secondary);
-  margin: 0.5rem;
-}
-.active {
-    color: var(--color-primary);
-    border-bottom: 3px solid var(-color-primary);
+  font-family: var(--font-secondary);
 }
