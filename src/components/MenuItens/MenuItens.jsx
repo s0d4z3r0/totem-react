@@ -1,7 +1,7 @@
 import style from "./MenuItens.module.css";
 import { NavLink } from "react-router-dom";
 
-const MenuItens = () => {
+const MenuItens = ({handleSetLinkItem}) => {
   const navLinkStyles = ({ isActive }) => {
     return {
       color: isActive ? "var(--color-primary)" : "var(--color-white)",
@@ -9,26 +9,30 @@ const MenuItens = () => {
     };
   };
 
-  return (
+  const handleNavLinkClick = (item) => {
+    handleSetLinkItem(item)
+  }
+  
+   return (
     <nav className={style.menuItens}>
       <ul className={style.itens}>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} to={"/totem-react/menu"}>
+          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('burger')}>
             Burgers
           </NavLink>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} to={"/"}>
+          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('fries')}>
             Fries
           </NavLink>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} to={"/"}>
+          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('drinks')}>
             Drinks
           </NavLink>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} to={"/"}>
+          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('desserts')}>
             Desserts
           </NavLink>
         </li>

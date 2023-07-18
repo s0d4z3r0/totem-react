@@ -22,6 +22,7 @@
 .item {
   margin: 0.5rem 2rem;
   white-space: nowrap;
+  list-style: none;
 }
 .item a {
   text-decoration: none;

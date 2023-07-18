@@ -3,24 +3,25 @@ import CardsItens from '../CardsItens/CardsItens'
 import Burger1 from '../../img/burger-carousel1.jpg'
 import Burger2 from '../../img/burger-carousel2.jpg'
 import Burger3 from '../../img/burger-carousel3.jpg'
+import { forwardRef } from 'react'
 
-const Burgers = () => {
+const Burgers = ({}, ref) => {
   const burgersTypes = [
     {
-      name: 'cheeseburger',
-      description: 'Pão, burger 120g, queijo prato, alface, tomate, picles, molho secreto da casa',
-      price: 15,
+      name: 'sublunch',
+      description: 'Pão baguete, filés 120g, alface, tomate, picles, molho secreto da casa',
+      price: 20,
       image: Burger1
     },
     {
-      name: 'sublunch',
-      description: 'Pão, frango, cebola, tomate e molho verde',
+      name: 'supperpig',
+      description: 'Pão, burger 120g, quejo e bacon',
       price: 18,
       image: Burger2
     },
     {
-      name: 'supperpig',
-      description: 'Pão, bacon, burger 120g suíno, farofa de torresmo e bbq',
+      name: 'cheesepork',
+      description: 'Pão, alface, burger 120g, mix de queijos, pulled pork',
       price: 22,
       image: Burger3
     },
@@ -28,11 +29,11 @@ const Burgers = () => {
 
 
   return (
-    <div className={style.burgers}>
+    <div className={style.burgers} ref={ref}>
         <h2>Burgers</h2>
         <CardsItens foods={burgersTypes}/>
     </div>
   )
 }
 
-export default Burgers
+export default forwardRef(Burgers)

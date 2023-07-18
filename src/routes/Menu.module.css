@@ -2,7 +2,11 @@
     z-index: -1;
     padding-bottom: 3rem;
     background-color: var(--color-black);
-    overflow: hidden;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+    /* border: 1px solid red; */
+    height: 33rem;
+    margin-top: 6.2rem;
 }
  /* Mobile M and L*/
  @media (min-width: 375px) {

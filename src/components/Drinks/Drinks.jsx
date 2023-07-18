@@ -1,8 +1,9 @@
 import style from './Drinks.module.css'
 import CardsItens from '../CardsItens/CardsItens'
 import Drink1 from '../../img/bebida-bg.png'
+import { forwardRef } from 'react'
 
-const Drinks = () => {
+const Drinks = ({}, ref) => {
   const drinksTypes = [
     {
       name: 'Coca-Cola',
@@ -32,11 +33,11 @@ const Drinks = () => {
 
 
   return (
-    <div className={style.drinks}>
+    <div className={style.drinks} ref={ref}>
         <h2>Drinks</h2>
         <CardsItens foods={drinksTypes}/>
     </div>
   )
 }
 
-export default Drinks
+export default forwardRef(Drinks)
