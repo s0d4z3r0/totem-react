@@ -24,7 +24,9 @@
   white-space: nowrap;
   list-style: none;
 }
-.item a {
+.item button {
+  background-color: transparent;
+  border: none;
   text-decoration: none;
   color: var(--color-white);
   font-size: 1.2rem;

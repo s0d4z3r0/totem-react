@@ -1,40 +1,53 @@
+import { useState } from "react";
 import style from "./MenuItens.module.css";
-import { NavLink } from "react-router-dom";
 
-const MenuItens = ({handleSetLinkItem}) => {
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      color: isActive ? "var(--color-primary)" : "var(--color-white)",
-      borderBottom: isActive ? "3px solid #FA8023" : "none",
-    };
-  };
+const MenuItens = ({ handleSetLinkItem }) => {
+  const [clicked, setClicked] = useState("");
 
   const handleNavLinkClick = (item) => {
-    handleSetLinkItem(item)
-  }
-  
-   return (
+    handleSetLinkItem(item);
+    setClicked(item);
+  };
+
+  const itemActive = {
+    color: "var(--color-primary)",
+    borderBottom: "2px solid var(--color-primary)",
+  };
+
+  return (
     <nav className={style.menuItens}>
       <ul className={style.itens}>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('burger')}>
+          <button
+            onClick={() => handleNavLinkClick("burger")}
+            style={clicked === "burger" ? itemActive : {}}
+          >
             Burgers
-          </NavLink>
+          </button>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('fries')}>
+          <button
+            onClick={() => handleNavLinkClick("fries")}
+            style={clicked === "fries" ? itemActive : {}}
+          >
             Fries
-          </NavLink>
+          </button>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('drinks')}>
+          <button
+            onClick={() => handleNavLinkClick("drinks")}
+            style={clicked === "drinks" ? itemActive : {}}
+          >
             Drinks
-          </NavLink>
+          </button>
         </li>
         <li className={style.item}>
-          <NavLink style={navLinkStyles} onClick={() => handleNavLinkClick('desserts')}>
+          <button
+            onClick={() => handleNavLinkClick("desserts")}
+            style={clicked === "desserts" ? itemActive : {}}
+          >
             Desserts
-          </NavLink>
+          </button>
         </li>
       </ul>
     </nav>
