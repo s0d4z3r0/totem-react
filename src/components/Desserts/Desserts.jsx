@@ -1,32 +1,32 @@
 import style from './Desserts.module.css'
 import CardsItens from '../CardsItens/CardsItens'
-import Dessert1 from '../../img/sorvete-bg.png'
+import Dessert1 from '../../img/sorvete-bg1.png'
 import { forwardRef } from 'react'
 
 const Desserts = ({}, ref) => {
   const dessertsTypes = [
     {
-      name: 'Chocolate',
-      description: 'Casquinha com 1 bola de sorvete sabor Chocolate.',
-      price: 6,
+      name: 'Shake Chocolate',
+      description: 'Delicioso milk-shake sabor Chocolate.',
+      price: 10,
       image: Dessert1
     },
     {
-      name: 'Morango',
-      description: 'Casquinha com 1 bola de sorvete sabor Morango.',
-      price: 6,
+      name: 'Shake Morango',
+      description: 'Delicioso milk-shake sabor Morango.',
+      price: 10,
       image: Dessert1
     },
     {
-      name: 'Baunilha',
-      description: 'Casquinha com 1 bola de sorvete sabor Baunilha.',
-      price: 5,
+      name: 'Shake Baunilha',
+      description: 'Delicioso milk-shake sabor Baunilha.',
+      price: 10,
       image: Dessert1
     },
     {
-      name: 'Chiclete',
-      description: 'Casquinha com 1 bola de sorvete sabor Chiclete.',
-      price: 9,
+      name: 'Shake Chiclete',
+      description: 'Delicioso milk-shake sabor Chiclete.',
+      price: 12,
       image: Dessert1
     },
   ]

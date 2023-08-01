@@ -1,8 +1,8 @@
 import style from './Burgers.module.css'
 import CardsItens from '../CardsItens/CardsItens'
-import Burger1 from '../../img/burger-carousel1.jpg'
-import Burger2 from '../../img/burger-carousel2.jpg'
-import Burger3 from '../../img/burger-carousel3.jpg'
+import Burger1 from '../../img/burger-carousel1.png'
+import Burger2 from '../../img/burger-carousel2.png'
+import Burger3 from '../../img/burger-carousel3.png'
 import { forwardRef } from 'react'
 
 const Burgers = ({}, ref) => {

@@ -1,6 +1,6 @@
 import style from './Fries.module.css'
 import CardsItens from '../CardsItens/CardsItens'
-import Fries1 from '../../img/fritas-bg.png'
+import Fries1 from '../../img/fritas-bg1.png'
 import { forwardRef } from 'react'
 
 const Fries = ({}, ref) => {
