@@ -13,6 +13,7 @@ import Desserts from '../components/Desserts/Desserts'
 
 const Menu = () => {
   const [searchHideShow, setSearchHideShow] = useState(false)
+  const [searchItem, setSearchItem] = useState('')
 
   const burgersRef = useRef(null)
   const friesRef = useRef(null)
@@ -20,7 +21,6 @@ const Menu = () => {
   const dessertsRef = useRef(null)
 
   const handleSetLinkItem = (item) => {
-
     if(item === 'burger'){
       burgersRef.current?.scrollIntoView({ behavior: 'smooth'})
     }else if(item === 'fries'){
@@ -30,23 +30,21 @@ const Menu = () => {
     }else if(item === 'desserts'){
       dessertsRef.current?.scrollIntoView({behavior: 'smooth'})
     }
-
-    console.log(item)
-
   }
+
 
   return (
     <div className={style.menu}>
         <div className={style.navbar}>
           <Navbar searchHideShow={searchHideShow} setSearchHideShow={setSearchHideShow}/>
           <MenuItens handleSetLinkItem={handleSetLinkItem}/>
-          <Search searchHideShow={searchHideShow}/>
+          <Search searchHideShow={searchHideShow} setSearchItem={setSearchItem}/>
         </div>
         <div className={style.itens}>
-          <Burgers ref={burgersRef}/>
-          <Fries ref={friesRef}/>
-          <Drinks ref={drinksRef}/>
-          <Desserts ref={dessertsRef}/>
+          <Burgers ref={burgersRef} searchItem={searchItem}/>
+          <Fries ref={friesRef} searchItem={searchItem}/>
+          <Drinks ref={drinksRef} searchItem={searchItem}/>
+          <Desserts ref={dessertsRef} searchItem={searchItem}/>
         </div>
         <div className={style.cart}><Footer/></div>
     </div>

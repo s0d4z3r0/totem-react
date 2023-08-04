@@ -6,7 +6,6 @@ const Navbar = ({searchHideShow, setSearchHideShow}) => {
     e.preventDefault()
     setSearchHideShow(!searchHideShow)
     
-    console.log(searchHideShow)
   }
 
   return (

@@ -1,16 +1,32 @@
-import style from './Search.module.css'
+import { useState } from "react";
+import style from "./Search.module.css";
 
-const Search = ({searchHideShow}) => {
+const Search = ({ searchHideShow, setSearchItem }) => {
+  const [search, setSearch] = useState("");
+
+  setSearchItem(search.toLowerCase())
+
+
+
   return (
-    <div className={`${style.search} + ${searchHideShow ? style.show : style.none}`}>
-        <form>
-            <label>
-                <i className='bi bi-search'></i>
-                <input type="text" placeholder='Buscar no cardápio'/>
-            </label>
-        </form>
+    <div
+      className={`${style.search} + ${
+        searchHideShow ? style.show : style.none
+      }`}
+    >
+      <form onSubmit={e => e.preventDefault()}>
+        <label>
+          <i className="bi bi-search"></i>
+          <input
+            type="text"
+            placeholder="Buscar no cardápio"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </label>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
