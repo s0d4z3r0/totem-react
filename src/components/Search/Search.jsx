@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./Search.module.css";
 
 const Search = ({ searchHideShow, setSearchItem }) => {
   const [search, setSearch] = useState("");
 
-  setSearchItem(search.toLowerCase())
-
-
+  useEffect(() => {
+    setSearchItem(search.toLowerCase());
+  }, [setSearchItem, search]);
 
   return (
     <div
@@ -14,7 +14,7 @@ const Search = ({ searchHideShow, setSearchItem }) => {
         searchHideShow ? style.show : style.none
       }`}
     >
-      <form onSubmit={e => e.preventDefault()}>
+      <form onSubmit={(e) => e.preventDefault()}>
         <label>
           <i className="bi bi-search"></i>
           <input

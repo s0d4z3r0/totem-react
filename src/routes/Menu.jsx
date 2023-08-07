@@ -36,7 +36,7 @@ const Menu = () => {
   return (
     <div className={style.menu}>
         <div className={style.navbar}>
-          <Navbar searchHideShow={searchHideShow} setSearchHideShow={setSearchHideShow}/>
+          <Navbar setSearchHideShow={setSearchHideShow}/>
           <MenuItens handleSetLinkItem={handleSetLinkItem}/>
           <Search searchHideShow={searchHideShow} setSearchItem={setSearchItem}/>
         </div>
