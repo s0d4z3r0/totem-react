@@ -1,14 +1,11 @@
 .modal{
-    border: 1px solid red;
     position: absolute;
     top: 0;
     z-index: 1000;
-    color: #fff;
     width: 100%;
     height: 100%;
 }
 .bg_modal{
-    border: 1px solid greenyellow;
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
     display: flex;
@@ -16,8 +13,99 @@
     align-items: center;
 }
 .content_modal{
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
     width: 80%;
     height: 80%;
-    background-color: var(--color-white);
+    /* background: rgb(122,63,17);
+    background: linear-gradient(180deg, rgba(122,63,17,1) 0%, rgba(15,15,15,1) 10%); */
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    position: relative;
+    overflow: hidden;
+}
+.img{
+    display: flex;
+    position: relative;
+    border-radius: 5px 0px 0px 0px;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-secondary);
+}
+.img img{
+    width: 100%;
+    position: absolute;
+    transform: translate(0%, -20%);
+}
+.img i{
+    position: absolute;
+    color: var(--color-primary);
+    font-size: 16pt;
+    padding: 0.1rem;
+    top: 0%;
+    right: 0%;
+    background-color: var(--color-secondary);
+    display: flex;
+    border-radius: 0px 0px 0px 5px;
+}
+.name h3{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    margin-left: .5rem;
+    font-size: 1.3rem;
+}
+.line{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid var(--color-tertiary);
+}
+.description p{
+    padding: .5rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-white);
+}
+.price{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    bottom: 0;
+    margin-left: .8rem;
+}
+.price h3, .price p{
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    color: var(--color-tertiary);
+}
+.price p{
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.2rem;
+}
+.add{
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+    height: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px 0px 0px 0px;
+    padding: 0.1rem;
+    background-color: var(--color-quaternary);
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+.add:hover{
+    background-color: var(--color-secondary);
 }
