@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import style from "./Modal.module.css";
 
-const Modal = ({ item, setModal }) => {
+const Modal = ({ item, setModal, setAlertConfirm }) => {
+
+
   const handleModal = (e) => {
     e.preventDefault();
 
@@ -11,6 +14,20 @@ const Modal = ({ item, setModal }) => {
       setModal((prevModal) => !prevModal);
     }
   };
+
+  const handleAlert = (e) => {
+    e.preventDefault()
+
+    setAlertConfirm(true)
+
+    const timeOutAlertConfirm = setTimeout(() => {
+      setAlertConfirm((prevAlertConfirm) => !prevAlertConfirm)
+    }, 2000)
+
+    return () => {
+      clearTimeout(timeOutAlertConfirm)
+    }
+  }
 
   return (
     <div className={style.modal}>
@@ -33,7 +50,7 @@ const Modal = ({ item, setModal }) => {
                 <p>R$</p>
                 <h3>{item.price.toFixed(2).replace('.', ',')}</h3>
               </div>
-              <button className={style.add}>Adicionar</button>
+              <button className={style.add} onClick={handleAlert}>Adicionar</button>
             </div>
           ) : (
             ""

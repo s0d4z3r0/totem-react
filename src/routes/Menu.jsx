@@ -9,8 +9,9 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Search from "../components/Search/Search";
 import MenuItens from "../components/MenuItens/MenuItens";
-import Modal from "../components/Modal/Modal";
 import CardsItens from "../components/CardsItens/CardsItens";
+import Modal from "../components/Modal/Modal";
+import Alert from "../components/Alert/Alert";
 
 // Imagens
 import Burger1 from "../img/burger-carousel1.png";
@@ -28,8 +29,9 @@ const Menu = () => {
   // Abrir modal
   const [modal, setModal] = useState(false);
   // State do item clicado
-  // Trazer objeto do item clicado do CardItens
-  const [item, setItem] = useState('')
+  const [item, setItem] = useState("");
+  // Abrir confirm alert modal
+  const [alertConfirm, setAlertConfirm] = useState(false);
 
   // Setando Ref para clicar e ir para a seção correta
   const burgersRef = useRef(null);
@@ -160,10 +162,18 @@ const Menu = () => {
     matchItens(dessert, searchItem)
   );
 
-
   return (
     <div className={style.menu}>
-      {modal ? <Modal setModal={setModal} item={item}/> : ''}
+      {modal ? (
+        <Modal
+          setModal={setModal}
+          item={item}
+          setAlertConfirm={setAlertConfirm}
+        />
+      ) : (
+        ""
+      )}
+      <Alert alertConfirm={alertConfirm}/>
       <div className={style.navbar}>
         <Navbar setSearchHideShow={setSearchHideShow} />
         <MenuItens handleSetLinkItem={handleSetLinkItem} />
@@ -171,52 +181,64 @@ const Menu = () => {
       </div>
       <div className={style.itens}>
         <section ref={burgersRef}>
-            {filteredBurgers && (
-              filteredBurgers.length >= 1 ? (
-                <div className={style.burgers}>
-                  <h2>Burgers</h2>
-                  <CardsItens foods={filteredBurgers} setModal={setModal} setItem={setItem}/>
-                </div>
-              ) : (
-                ""
-              )
-            )}
+          {filteredBurgers &&
+            (filteredBurgers.length >= 1 ? (
+              <div className={style.burgers}>
+                <h2>Burgers</h2>
+                <CardsItens
+                  foods={filteredBurgers}
+                  setModal={setModal}
+                  setItem={setItem}
+                />
+              </div>
+            ) : (
+              ""
+            ))}
         </section>
         <section ref={friesRef}>
-            {filteredFries && (
-              filteredFries.length >= 1 ? (
-                <div className={style.fries}>
-                  <h2>Fries</h2>
-                  <CardsItens foods={filteredFries} setModal={setModal} setItem={setItem}/>
-                </div>
-              ) : (
-                ''
-              )
-            )}
+          {filteredFries &&
+            (filteredFries.length >= 1 ? (
+              <div className={style.fries}>
+                <h2>Fries</h2>
+                <CardsItens
+                  foods={filteredFries}
+                  setModal={setModal}
+                  setItem={setItem}
+                />
+              </div>
+            ) : (
+              ""
+            ))}
         </section>
         <section ref={drinksRef}>
-            {filteredDrinks && (
-              filteredDrinks.length >= 1 ? (
-                <div className={style.drinks}>
-                  <h2>Drinks</h2>
-                  <CardsItens foods={filteredDrinks} setModal={setModal} setItem={setItem}/>
-                </div>
-              ) : (
-                ""
-              )
-            )}
+          {filteredDrinks &&
+            (filteredDrinks.length >= 1 ? (
+              <div className={style.drinks}>
+                <h2>Drinks</h2>
+                <CardsItens
+                  foods={filteredDrinks}
+                  setModal={setModal}
+                  setItem={setItem}
+                />
+              </div>
+            ) : (
+              ""
+            ))}
         </section>
         <section ref={dessertsRef}>
-            {filteredDesserts && (
-              filteredDesserts.length >= 1 ? (
-                <div className={style.drinks}>
-                  <h2>Desserts</h2>
-                  <CardsItens foods={filteredDesserts} setModal={setModal} setItem={setItem}/>
-                </div>
-              ) : (
-                ""
-              )
-            )}
+          {filteredDesserts &&
+            (filteredDesserts.length >= 1 ? (
+              <div className={style.drinks}>
+                <h2>Desserts</h2>
+                <CardsItens
+                  foods={filteredDesserts}
+                  setModal={setModal}
+                  setItem={setItem}
+                />
+              </div>
+            ) : (
+              ""
+            ))}
         </section>
       </div>
       <div className={style.cart}>

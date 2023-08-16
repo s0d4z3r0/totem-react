@@ -16,10 +16,8 @@
     border-radius: 5px 5px 5px 5px;
     width: 80%;
     height: 80%;
-    /* background: rgb(122,63,17);
-    background: linear-gradient(180deg, rgba(122,63,17,1) 0%, rgba(15,15,15,1) 10%); */
-    background-color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    background-color: var(--color-quaternary);
+    border: 1px solid var(--color-quaternary);
     position: relative;
     overflow: hidden;
 }
@@ -38,12 +36,12 @@
 }
 .img i{
     position: absolute;
-    color: var(--color-primary);
+    color: var(--color-black);
     font-size: 16pt;
     padding: 0.1rem;
     top: 0%;
     right: 0%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-quaternary);
     display: flex;
     border-radius: 0px 0px 0px 5px;
 }
@@ -52,7 +50,8 @@
     text-align: center;
     text-transform: uppercase;
     font-family: var(--font-secondary);
-    color: var(--color-primary);
+    color: var(--color-black);
+    font-weight: bold;
     margin-left: .5rem;
     font-size: 1.3rem;
 }
@@ -78,7 +77,7 @@
 .price h3, .price p{
     font-family: var(--font-secondary);
     font-size: 1.5rem;
-    color: var(--color-tertiary);
+    color: var(--color-black);
 }
 .price p{
     font-size: 1rem;
@@ -100,12 +99,14 @@
     font-family: var(--font-secondary);
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px 0px 0px 0px;
+    border-radius: 5px 0px 5px 0px;
     padding: 0.1rem;
-    background-color: var(--color-quaternary);
+    background-color: rgba(122, 63, 17, .5);
+    color: var(--color-primary);
     cursor: pointer;
     transition: .1s ease-in-out;
 }
 .add:hover{
     background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
