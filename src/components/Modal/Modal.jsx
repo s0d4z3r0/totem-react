@@ -1,9 +1,8 @@
-import { useEffect } from "react";
 import style from "./Modal.module.css";
 
 const Modal = ({ item, setModal, setAlertConfirm }) => {
 
-
+  // Ao clicar no ícone 'x' ou fora do modal, fechar o modal
   const handleModal = (e) => {
     e.preventDefault();
 
@@ -15,6 +14,7 @@ const Modal = ({ item, setModal, setAlertConfirm }) => {
     }
   };
 
+  // Abrir Alerta de Confirmação de add pedido
   const handleAlert = (e) => {
     e.preventDefault()
 

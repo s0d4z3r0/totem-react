@@ -4,6 +4,7 @@ import style from "./Search.module.css";
 const Search = ({ searchHideShow, setSearchItem }) => {
   const [search, setSearch] = useState("");
 
+  // Monitora e setta o SearchItem em lowerCase
   useEffect(() => {
     setSearchItem(search.toLowerCase());
   }, [setSearchItem, search]);

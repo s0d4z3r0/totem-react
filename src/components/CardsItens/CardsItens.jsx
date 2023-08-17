@@ -2,8 +2,8 @@ import style from './CardsItens.module.css'
 
 const CardsItens = ({foods, setModal, setItem}) => {
 
+  // Ao clicar no card, seta o Modal para 'true' e seta o Item(name, description, price e image).
   const handleModal = (food) => {
-    
     setModal((prevModal) => !prevModal)
     setItem(food)
   }

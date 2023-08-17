@@ -101,12 +101,12 @@
     font-weight: bold;
     border-radius: 5px 0px 5px 0px;
     padding: 0.1rem;
-    background-color: rgba(122, 63, 17, .5);
+    background-color: rgba(0, 0, 0, .6);
     color: var(--color-primary);
     cursor: pointer;
     transition: .1s ease-in-out;
 }
 .add:hover{
-    background-color: var(--color-secondary);
+    background-color: var(--color-black);
     color: var(--color-primary);
 }

@@ -8,7 +8,7 @@ const ErrorPage = () => {
 
   const navigate = useNavigate();
 
-
+// Conta regressivamente 10 segundos e redireciona a página para o Home
   useEffect(() => {
      const redirect = setInterval(() => {
         setSeconds(seconds-1)
@@ -37,7 +37,7 @@ const ErrorPage = () => {
           <p>
             Infelizmente parece que a página que você está procurando não
             existe. <br />Redirecionando para a página
-            inicial em <span className={style.timer}>{seconds}</span>...
+            inicial em <span className={style.timer}>{seconds < 10 ? '0' + seconds : seconds}</span>...
           </p>
         </div>
       </div>

@@ -44,6 +44,11 @@
   .logo img {
     width: 15rem;
   }
+  .text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
   .text h3 {
     font-size: 2rem;
   }

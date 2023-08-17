@@ -1,9 +1,7 @@
-import { useState } from "react";
 import style from "./MenuItens.module.css";
 
 const MenuItens = ({ handleSetLinkItem }) => {
-  const [activeSection, setActiveSection] = useState("burger");
-
+  // Seta o handleSetLinkItem com o nome do botão para scroll pra o Ref
   const handleNavLinkClick = (item) => {
     handleSetLinkItem(item);
   };
@@ -13,10 +11,8 @@ const MenuItens = ({ handleSetLinkItem }) => {
       <ul className={style.itens}>
         <li className={style.item}>
           <button
-            className={activeSection === "burger" ? style.active : ""}
             onClick={() => {
               handleNavLinkClick("burger");
-              setActiveSection("burger");
             }}
           >
             Burgers
@@ -24,10 +20,8 @@ const MenuItens = ({ handleSetLinkItem }) => {
         </li>
         <li className={style.item}>
           <button
-            className={activeSection === "fries" ? style.active : ""}
             onClick={() => {
               handleNavLinkClick("fries");
-              setActiveSection("fries");
             }}
           >
             Fries
@@ -35,10 +29,8 @@ const MenuItens = ({ handleSetLinkItem }) => {
         </li>
         <li className={style.item}>
           <button
-            className={activeSection === "drinks" ? style.active : ""}
             onClick={() => {
               handleNavLinkClick("drinks");
-              setActiveSection("drinks");
             }}
           >
             Drinks
@@ -46,10 +38,8 @@ const MenuItens = ({ handleSetLinkItem }) => {
         </li>
         <li className={style.item}>
           <button
-            className={activeSection === "desserts" ? style.active : ""}
             onClick={() => {
               handleNavLinkClick("desserts");
-              setActiveSection("drinks");
             }}
           >
             Desserts
