@@ -2,11 +2,11 @@
     z-index: -1;
     background-color: var(--color-black);
     overflow-y: scroll;
-    /* overflow: hidden; */
-    /* border: 1px solid red; */
     height: 33rem;
     margin-top: 6.2rem;
-    /* padding-bottom: 2rem; */
+}
+.menu::-webkit-scrollbar{
+    width: 0px;
 }
 .burgers h2, .fries h2, .drinks h2, .desserts h2{
     padding-top: 1rem;

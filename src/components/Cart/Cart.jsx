@@ -1,11 +1,20 @@
-import { Link } from 'react-router-dom'
+import style from './Cart.module.css'
 
-const Cart = () => {
+const Cart = ({setCartShow}) => {
+
+  const handleOpenCart = (e) => {
+    e.preventDefault()
+
+    setCartShow((prevCartShow) => !prevCartShow)
+    
+  }
+
+
   return (
-    <div>
-        <h1>Cart</h1>
-        <Link to="/totem-react">Home</Link>
-        <Link to="/totem-react/menu">Menu</Link>
+    <div className={style.cartBar}>
+        <div className={style.cart}>
+            <i className='bi bi-cart4' onClick={handleOpenCart}></i>
+        </div>
     </div>
   )
 }

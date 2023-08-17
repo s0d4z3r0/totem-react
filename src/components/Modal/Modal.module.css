@@ -1,112 +1,288 @@
-.modal{
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
+/* Modal do Item */
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
 }
-.bg_modal{
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bg_modal {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content_modal{
-    border-radius: 5px 5px 5px 5px;
-    width: 80%;
-    height: 80%;
-    background-color: var(--color-quaternary);
-    border: 1px solid var(--color-quaternary);
-    position: relative;
-    overflow: hidden;
+.content_modal {
+  border-radius: 5px 5px 5px 5px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--color-quaternary);
+  border: 1px solid var(--color-quaternary);
+  position: relative;
+  overflow: hidden;
 }
-.img{
-    display: flex;
-    position: relative;
-    border-radius: 5px 0px 0px 0px;
-    height: 200px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--color-secondary);
+.img {
+  display: flex;
+  position: relative;
+  border-radius: 5px 0px 0px 0px;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-secondary);
 }
-.img img{
-    width: 100%;
-    position: absolute;
-    transform: translate(0%, -20%);
+.img img {
+  width: 100%;
+  position: absolute;
+  transform: translate(0%, -20%);
 }
-.img i{
-    position: absolute;
-    color: var(--color-black);
-    font-size: 16pt;
-    padding: 0.1rem;
-    top: 0%;
-    right: 0%;
-    background-color: var(--color-quaternary);
-    display: flex;
-    border-radius: 0px 0px 0px 5px;
+.img i {
+  position: absolute;
+  color: var(--color-black);
+  font-size: 16pt;
+  padding: 0.1rem;
+  top: 0%;
+  right: 0%;
+  background-color: var(--color-quaternary);
+  display: flex;
+  border-radius: 0px 0px 0px 5px;
 }
-.name h3{
-    width: 100%;
+.name h3 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  color: var(--color-black);
+  font-weight: bold;
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+}
+.line {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid var(--color-tertiary);
+}
+.description p {
+  padding: 0.5rem;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-white);
+}
+.price {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  bottom: 0;
+  margin-left: 0.8rem;
+}
+.price h3,
+.price p {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  color: var(--color-black);
+}
+.price p {
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.2rem;
+}
+.add {
+  border: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 2rem;
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px 0px 5px 0px;
+  padding: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.add:hover {
+  background-color: var(--color-black);
+  color: var(--color-primary);
+}
+
+/* Modal do Cart */
+.cartModal {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+.bg_cartModal {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_cartModal {
+  border-radius: 5px 5px 5px 5px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--color-quaternary);
+  border: 1px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.close {
+  position: absolute;
+  color: var(--color-secondary);
+  font-size: 16pt;
+  padding: 0.1rem;
+  top: 0%;
+  right: 0%;
+  background-color: var(--color-primary);
+  display: flex;
+  border-radius: 0px 0px 0px 5px;
+}
+.titleCart {
     text-align: center;
-    text-transform: uppercase;
-    font-family: var(--font-secondary);
-    color: var(--color-black);
-    font-weight: bold;
-    margin-left: .5rem;
-    font-size: 1.3rem;
-}
-.line{
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid var(--color-tertiary);
-}
-.description p{
-    padding: .5rem;
-    font-family: var(--font-secondary);
-    font-size: 1rem;
-    color: var(--color-white);
-}
-.price{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 5rem;
-    bottom: 0;
-    margin-left: .8rem;
-}
-.price h3, .price p{
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
+    font-weight: normal;
+    color: var(--color-secondary);
     font-size: 1.5rem;
-    color: var(--color-black);
 }
-.price p{
-    font-size: 1rem;
+.cart hr {
+  margin-top: 0.2rem;
+  border-color: var(--color-black);
+  margin-bottom: 0.5em;
+}
+.productList {
+    height: 26.4rem;
+    overflow-y: scroll;
+    padding: 0rem 1rem 2.3rem 1rem;
+}
+.productList::-webkit-scrollbar {
+  width: 0px;
+}
+.productCart {
+  border-radius: 5px;
+  margin-top: 0.3rem;
+  padding: 0rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+}
+.qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qty i {
+  display: flex;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-black);
+  color: var(--color-tertiary);
+}
+.qty input {
+  width: 2rem;
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-tertiary);
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+.nameProduct {
+  width: 100%;
+}
+.nameProduct p {
+  padding: 0rem 0.5rem;
+  color: var(--color-tertiary);
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  padding-bottom: 0.2rem;
+}
+.priceProduct {
+  display: flex;
+  font-family: var(--font-secondary);
+  color: var(--color-tertiary);
+}
+.priceProduct p:first-child {
+  display: flex;
+  align-items: end;
+  font-size: 0.6rem;
+  padding-bottom: 0.1rem;
+}
+.totalPriceAndPayButton {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-secondary);
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  padding: 0.1rem 0rem;
+  overflow: hidden;
+}
+.totalPrice {
+  border-radius: 0px 0px 0px 5px;
+  display: flex;
+  padding-left: .2rem;
+  background-color: var(--color-secondary);
+}
+.totalPrice p {
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: var(--color-tertiary);
+  padding-left: .2rem;
+}
+.totalPrice p:nth-of-type(1){
+    display: flex;
+    align-items: flex-start;
+    font-size: .8rem;
+}
+.totalPrice p:nth-of-type(2){
     display: flex;
     align-items: flex-end;
-    padding-bottom: 0.2rem;
+    font-size: .8rem;
+    padding-bottom: .4rem;
 }
-.add{
-    border: none;
-    position: absolute;
+.totalPrice p:nth-of-type(3){
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    bottom: 0;
-    right: 0;
-    width: 65%;
-    height: 2rem;
-    font-family: var(--font-secondary);
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px 0px 5px 0px;
-    padding: 0.1rem;
-    background-color: rgba(0, 0, 0, .6);
+    align-items: flex-end;
+    font-size: 1.8rem;
     color: var(--color-primary);
-    cursor: pointer;
-    transition: .1s ease-in-out;
+    padding-right: .5rem;
 }
-.add:hover{
-    background-color: var(--color-black);
-    color: var(--color-primary);
+.payButton {
+  width: 100%;
+  border-radius: 0px 0px 5px 0px;
+}
+.pay {
+  border: none;
+  width: 100%;
+  padding: .4rem;
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0px 0px 5px 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.pay:hover {
+  background-color: var(--color-black);
+  color: var(--color-primary);
 }

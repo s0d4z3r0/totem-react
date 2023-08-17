@@ -20,6 +20,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    background-color: var(--color-black);
+    /* position: relative */
+}
 body{
     background-color: var(--color-primary);
 }

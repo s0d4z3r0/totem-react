@@ -5,7 +5,7 @@ import style from "./Menu.module.css";
 import { useRef, useState } from "react";
 
 // Components
-import Footer from "../components/Footer/Footer";
+import Cart from "../components/Cart/Cart";
 import Navbar from "../components/Navbar/Navbar";
 import Search from "../components/Search/Search";
 import MenuItens from "../components/MenuItens/MenuItens";
@@ -28,6 +28,7 @@ const Menu = () => {
   const [searchItem, setSearchItem] = useState("");
   // Abrir modal
   const [modal, setModal] = useState(false);
+  const [cartShow, setCartShow] = useState(false);
   // State do item clicado
   const [item, setItem] = useState("");
   // Abrir confirm alert modal
@@ -173,7 +174,8 @@ const Menu = () => {
       ) : (
         ""
       )}
-      <Alert alertConfirm={alertConfirm}/>
+      {cartShow ? <Modal setCartShow={setCartShow}/> : ""}
+      <Alert alertConfirm={alertConfirm} />
       <div className={style.navbar}>
         <Navbar setSearchHideShow={setSearchHideShow} />
         <MenuItens handleSetLinkItem={handleSetLinkItem} />
@@ -242,7 +244,7 @@ const Menu = () => {
         </section>
       </div>
       <div className={style.cart}>
-        <Footer />
+        <Cart setCartShow={setCartShow} />
       </div>
     </div>
   );

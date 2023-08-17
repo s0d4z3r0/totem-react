@@ -5,7 +5,7 @@ const initialState = {
     productsTotalPrice: 0
 }
 
-const productsReducer = (state = initialState, action) => {
+const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case CartActionTypes.ADD_PRODUCT:
             return{
@@ -16,4 +16,4 @@ const productsReducer = (state = initialState, action) => {
     }
 }
 
-export default productsReducer
+export default cartReducer
