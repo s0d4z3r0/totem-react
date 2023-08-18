@@ -43,13 +43,13 @@ const Menu = () => {
   // Scroll até a seção que o Ref apontar
   const handleSetLinkItem = (item) => {
     if (item === "burger") {
-      burgersRef.current?.scrollIntoView({ behavior: "smooth" });
+      burgersRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
     } else if (item === "fries") {
-      friesRef.current?.scrollIntoView({ behavior: "smooth" });
+      friesRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
     } else if (item === "drinks") {
-      drinksRef.current?.scrollIntoView({ behavior: "smooth" });
+      drinksRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
     } else if (item === "desserts") {
-      dessertsRef.current?.scrollIntoView({ behavior: "smooth" });
+      dessertsRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
     }
   };
 
@@ -114,6 +114,12 @@ const Menu = () => {
       price: 8,
       image: Drink1,
     },
+    {
+      name: "Soda-Zero",
+      description: "Soda-Zero 400ml.",
+      price: 8,
+      image: Drink1,
+    },
   ];
   const dessertsTypes = [
     {
@@ -137,6 +143,12 @@ const Menu = () => {
     {
       name: "Shake Chiclete",
       description: "Delicioso milk-shake sabor Chiclete.",
+      price: 12,
+      image: Dessert1,
+    },
+    {
+      name: "Shake Maracujá",
+      description: "Delicioso milk-shake sabor Maracujá.",
       price: 12,
       image: Dessert1,
     },

@@ -21,8 +21,7 @@
     box-sizing: border-box;
 }
 html{
-    background-color: var(--color-black);
-    /* position: relative */
+    background-color: var(--color-primary);
 }
 body{
     background-color: var(--color-primary);

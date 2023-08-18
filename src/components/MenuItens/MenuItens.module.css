@@ -2,27 +2,24 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  top: 7.5%;
+  top: 3.1rem;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.2rem;
+  align-items: center;
   height: 3.2rem;
   background-color: var(--color-black);
   border-bottom: 1px solid var(--color-gray);
 }
 .itens {
+  width: 100%;
   display: flex;
-  overflow-x: scroll;
+  justify-content: space-evenly;
 }
 .itens::-webkit-scrollbar{
   height: 6px;
 }
-.itens{
-    -ms-overflow-style: none;
-}
 .item {
   margin: 0.5rem 1.6rem;
-  white-space: nowrap;
   list-style: none;
 }
 .item button {
@@ -33,4 +30,7 @@
   color: var(--color-white);
   font-size: 1.2rem;
   font-family: var(--font-secondary);
+}
+button img{
+  filter: invert();
 }

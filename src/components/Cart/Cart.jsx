@@ -1,22 +1,21 @@
-import style from './Cart.module.css'
+import style from "./Cart.module.css";
 
-const Cart = ({setCartShow}) => {
-
+const Cart = ({ setCartShow }) => {
+  // Abrir carrinho
   const handleOpenCart = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setCartShow((prevCartShow) => !prevCartShow)
-    
-  }
+    setCartShow((prevCartShow) => !prevCartShow);
+  };
 
 
   return (
     <div className={style.cartBar}>
-        <div className={style.cart}>
-            <i className='bi bi-cart4' onClick={handleOpenCart}></i>
-        </div>
+      <div className={style.cart}>
+        <i className="bi bi-cart4" onClick={handleOpenCart}></i>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

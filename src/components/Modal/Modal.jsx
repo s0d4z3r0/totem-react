@@ -1,6 +1,7 @@
 import style from "./Modal.module.css";
 
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { addProductToCart } from "../../redux/cart/actions";
 
 const Modal = ({ item, setModal, setAlertConfirm, setCartShow }) => {
@@ -48,6 +49,9 @@ const Modal = ({ item, setModal, setAlertConfirm, setCartShow }) => {
     };
   };
 
+  // Resgatar o products do reducer
+  // const { products } = useSelector((rootReducer) => rootReducer.cartReduce);
+
   return (
     <>
       {item ? (
@@ -89,25 +93,33 @@ const Modal = ({ item, setModal, setAlertConfirm, setCartShow }) => {
                 <hr className={style.line} />
                 <div className={style.productList}>
                   {/* Estrutura para fazer o map */}
-                  <div className={style.productCart}>
-                    <div className={style.qty}>
-                      <i className="bi bi-dash-circle"></i>
-                      <input
-                        type="text"
-                        disabled
-                        value={"1"}
-                        className={style.inputQty}
-                      />
-                      <i className="bi bi-plus-circle"></i>
-                    </div>
-                    <div className={style.nameProduct}>
-                      <p>{/*item.name*/}sublunch</p>
-                    </div>
-                    <div className={style.priceProduct}>
-                      <p>R$</p>
-                      {/* {item.price.toFixed(2).replace('.', ',')} */}22,00
-                    </div>
-                  </div>
+
+                  <ul>
+                    {products.map((products) => (
+                      <li key={products.name}>
+                        <div className={style.productCart}>
+                          <div className={style.qty}>
+                            <i className="bi bi-dash-circle"></i>
+                            <input
+                              type="text"
+                              disabled
+                              value={"1"}
+                              className={style.inputQty}
+                            />
+                            <i className="bi bi-plus-circle"></i>
+                          </div>
+                          <div className={style.nameProduct}>
+                            <p>{products.name}</p>
+                          </div>
+                          <div className={style.priceProduct}>
+                            <p>R$</p>
+                            {products.price.toFixed(2).replace('.', ',')}
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+
                 </div>
               </div>
               <div className={style.totalPriceAndPayButton}>

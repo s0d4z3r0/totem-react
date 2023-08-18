@@ -1,66 +1,69 @@
-.search{
-    position: fixed;
-    z-index: 0;
-    width: 100%;
-    padding-top: .4rem;
-    top: 14.3%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: .2rem;
-    border-bottom: 1px solid var(--color-gray);
-    background-color: var(--color-black);
+.search {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  padding-top: 0.4rem;
+  top: 6.3rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--color-gray);
+  background-color: var(--color-black);
 }
-.search form{
-    width: 100%;
+.search form {
+  width: 100%;
 }
-.search label{
-    border-radius: 10px;
-    background-color: var(--color-gray);
-    margin: 0.5rem;
-    padding: .2rem 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.search label {
+  border-radius: 10px;
+  background-color: var(--color-gray);
+  margin: 0.5rem;
+  padding: 0.2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.search i{
-    width: 100%;
-    text-align: center;
-    color: var(--color-primary);
-    font-size: 1.3rem;
-    cursor: text;
+.search i {
+  width: 100%;
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  cursor: text;
 }
-.search input{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    padding: .2rem;
-    color: var(--color-primary);
+.search input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  color: var(--color-primary);
 }
-.show{
-    display: block;
-    animation: moveToDown .1s ease-in-out;
+.show {
+  display: block;
+  animation: moveToDown 0.1s ease-in-out;
 }
-.none{
+.none {
+  display: none;
+  transform: translateY(-59px);
+  animation: moveToUp 0.1s ease-in-out;
+}
+
+@keyframes moveToDown {
+  0% {
     transform: translateY(-59px);
-    animation: moveToUp .1s ease-in-out;
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-@keyframes moveToDown{
-    0%{
-        transform: translateY(-59px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-@keyframes moveToUp{
-    0%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-59px);
-    }
+@keyframes moveToUp {
+  0% {
+    display: block;
+    transform: translateY(0px);
+  }
+  100% {
+    display: none;
+    transform: translateY(-59px);
+  }
 }

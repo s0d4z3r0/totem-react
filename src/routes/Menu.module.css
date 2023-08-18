@@ -1,9 +1,10 @@
 .menu{
     z-index: -1;
     background-color: var(--color-black);
+    width: 100%;
+    margin-top: 6.3rem;
     overflow-y: scroll;
-    height: 33rem;
-    margin-top: 6.2rem;
+    height: 32.8rem;
 }
 .menu::-webkit-scrollbar{
     width: 0px;
