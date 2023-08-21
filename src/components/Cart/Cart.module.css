@@ -8,11 +8,27 @@
     background-color: var(--color-primary);
 }
 .cart{
+    padding-top: .8rem;
+    height: 4rem;
     text-align: center;
-    margin-bottom: .5rem;
+    position: fixed;
+    bottom: .5rem;
+}
+.circle{
+    width: 1.2rem;
     position: absolute;
-    bottom: 15%;
-
+    right: 0rem;
+    top: 0;
+    background-color: var(--color-cancel);
+    border-radius: 50%;
+    border: 1px solid var(--color-cancel);
+}
+.circle p{
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    line-height: 1.1rem;
+    color: var(--color-white);
+    font-size: .7rem;
 }
 .cart i{
     background-color: var(--color-primary);

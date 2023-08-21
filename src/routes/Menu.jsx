@@ -56,6 +56,7 @@ const Menu = () => {
   // Itens do cardápio
   const burgersTypes = [
     {
+      id: Math.floor(Math.random() * 1000),
       name: "sublunch",
       description:
         "Pão baguete, 120g de filé fatiado, alface, tomate, picles, molho secreto da casa.",
@@ -63,12 +64,14 @@ const Menu = () => {
       image: Burger1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "supperpig",
       description: "Pão, burger 120g, queijo e bacon.",
       price: 18,
       image: Burger2,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "cheesepork",
       description: "Pão, alface, burger 120g, mix de queijos, pulled pork.",
       price: 22,
@@ -77,12 +80,14 @@ const Menu = () => {
   ];
   const friesTypes = [
     {
+      id: Math.floor(Math.random() * 1000),
       name: "simple fries",
       description: "150g Batata-frita crinkle, sequinha e crocante.",
       price: 8,
       image: Fries1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "super fries",
       description: "300g Batata-frita crinkle, sequinha e crocante.",
       price: 14,
@@ -91,30 +96,35 @@ const Menu = () => {
   ];
   const drinksTypes = [
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Coca-Cola",
       description: "Coca-cola 400ml.",
       price: 8,
       image: Drink1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Coca-Cola Zero",
       description: "Coca-Cola Zero 400ml.",
       price: 8,
       image: Drink1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Fanta-Laranja",
       description: "Fanta-Laranja 400ml.",
       price: 8,
       image: Drink1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Sprite",
       description: "Sprite 400ml.",
       price: 8,
       image: Drink1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Soda-Zero",
       description: "Soda-Zero 400ml.",
       price: 8,
@@ -123,30 +133,35 @@ const Menu = () => {
   ];
   const dessertsTypes = [
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Shake Chocolate",
       description: "Delicioso milk-shake sabor Chocolate.",
       price: 10,
       image: Dessert1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Shake Morango",
       description: "Delicioso milk-shake sabor Morango.",
       price: 10,
       image: Dessert1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Shake Baunilha",
       description: "Delicioso milk-shake sabor Baunilha.",
       price: 10,
       image: Dessert1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Shake Chiclete",
       description: "Delicioso milk-shake sabor Chiclete.",
       price: 12,
       image: Dessert1,
     },
     {
+      id: Math.floor(Math.random() * 1000),
       name: "Shake Maracujá",
       description: "Delicioso milk-shake sabor Maracujá.",
       price: 12,

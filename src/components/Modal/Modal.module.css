@@ -171,6 +171,9 @@
 .productList::-webkit-scrollbar {
   width: 0px;
 }
+.productList ul li{
+  list-style: none;
+}
 .productCart {
   border-radius: 5px;
   margin-top: 0.3rem;
