@@ -1,0 +1,94 @@
+.confirmRemove{
+    position: absolute;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+}
+.bg_confirmRemove{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_confirmRemove{
+    border-radius: 5px 5px 5px 5px;
+    width: 90%;
+    height: 15%;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content_confirmRemove span {
+    padding: 0rem .5rem;
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-black);
+}
+.content_buttons{
+    border-radius: 0px 0px 5px 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.content_buttons button{
+    padding: .3rem 0rem;
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+}
+button.button_cancel{
+    background-color: #bbb;
+    color: var(--color-white);
+    cursor: pointer;
+}
+button.button_remove{
+    background-color: var(--color-cancel);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+button.button_cancel:hover{
+    background-color: #aaa;
+}
+button.button_remove:hover{
+    background-color: #da2f14;
+}
+.confirmRemoveOpen{
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    backdrop-filter: blur(2px);
+}
+.confirmRemoveHide{
+    display: none;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+}
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+}
+@keyframes fadeOut{
+    0%{
+        display: block;
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}

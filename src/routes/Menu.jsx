@@ -31,7 +31,7 @@ const Menu = () => {
   const [cartShow, setCartShow] = useState(false);
   // State do item clicado
   const [item, setItem] = useState("");
-  // Abrir confirm alert modal
+  // Abre o Alert confirmando adição no cart
   const [alertConfirm, setAlertConfirm] = useState(false);
 
   // Setando Ref para clicar e ir para a seção correta
@@ -43,13 +43,19 @@ const Menu = () => {
   // Scroll até a seção que o Ref apontar
   const handleSetLinkItem = (item) => {
     if (item === "burger") {
-      burgersRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
+      burgersRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     } else if (item === "fries") {
-      friesRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
+      friesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else if (item === "drinks") {
-      drinksRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
+      drinksRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else if (item === "desserts") {
-      dessertsRef.current?.scrollIntoView({ behavior: "smooth", block: 'start' });
+      dessertsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
@@ -201,7 +207,11 @@ const Menu = () => {
       ) : (
         ""
       )}
-      {cartShow ? <Modal setCartShow={setCartShow}/> : ""}
+      {cartShow ? (
+        <Modal setCartShow={setCartShow} />
+      ) : (
+        ""
+      )}
       <Alert alertConfirm={alertConfirm} />
       <div className={style.navbar}>
         <Navbar setSearchHideShow={setSearchHideShow} />
