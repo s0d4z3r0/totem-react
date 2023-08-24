@@ -1,5 +1,5 @@
 .confirmRemove{
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1001;
     width: 100%;

@@ -1,6 +1,6 @@
 /* Modal do Item */
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -45,6 +45,7 @@
   background-color: var(--color-quaternary);
   display: flex;
   border-radius: 0px 0px 0px 5px;
+  cursor: pointer;
 }
 .name h3 {
   width: 100%;
@@ -114,7 +115,7 @@
 
 /* Modal do Cart */
 .cartModal {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -150,6 +151,7 @@
   background-color: var(--color-primary);
   display: flex;
   border-radius: 0px 0px 0px 5px;
+  cursor: pointer;
 }
 .titleCart {
     text-align: center;

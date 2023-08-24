@@ -1,11 +1,10 @@
 /* Mobile S */
 .home {
-    margin: 0 auto;
-    width: 98%;
-    height: 41rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0.5rem;
+    gap: 5.5rem;
   }
   .logo {
     display: flex;

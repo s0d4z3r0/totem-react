@@ -3,11 +3,12 @@
     background-color: var(--color-black);
     width: 100%;
     margin-top: 6.3rem;
+    padding-bottom: 2.5rem;
     overflow-y: scroll;
-    height: 32.8rem;
+    position: absolute;
 }
 .menu::-webkit-scrollbar{
-    width: 0px;
+    display: none;
 }
 .burgers h2, .fries h2, .drinks h2, .desserts h2{
     padding-top: 1rem;

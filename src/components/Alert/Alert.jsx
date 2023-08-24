@@ -9,7 +9,7 @@ const Alert = ({ alertConfirm }) => {
     >
       <div className={style.bg_alert}>
         <div className={style.content_alert}>
-          <p>Item adicionado ao carrinho com sucesso.</p>
+          <p>Item adicionado.</p>
         </div>
       </div>
     </div>
