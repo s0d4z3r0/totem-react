@@ -22,12 +22,12 @@ const ConfirmRemove = ({ confirmRemove, setConfirmRemove, removeId }) => {
 
   return (
     <div
-      className={
-        style.confirmRemove +
-        ` ${
-          confirmRemove ? style.confirmRemoveOpen : style.confirmedRemoveHide
-        }`
-      }
+    className={
+      style.confirmRemove +
+      ` ${
+        confirmRemove ? style.confirmRemoveOpen : style.confirmedRemoveHide
+      }`
+    }
     >
       {products
         ? products.map((product) => (

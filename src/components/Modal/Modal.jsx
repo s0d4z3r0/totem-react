@@ -5,10 +5,9 @@ import {
   addProductToCart,
   lessProductFromCart,
   moreProductToCart,
-  removeProductFromCart,
 } from "../../redux/cart/actions";
 import { selectProductsTotalPrice } from "../../redux/cart/cart.selectors";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import ConfirmRemove from "../ConfirmRemove/ConfirmRemove";
 
@@ -46,14 +45,11 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
   {
     /* ---------------------- FUNÇÕES REDUCER ------------------------------------- */
   }
+  const dispatch = useDispatch();
   // Resposta para remover ou não
   const [removeId, setRemoveId] = useState('')
-
-  const dispatch = useDispatch();
-
   // Resgatar o products do reducer
   const { products } = useSelector((rootReducer) => rootReducer.cartReducer);
-
   // Resgatar o valor total do reducer
   const productsTotalPrice = useSelector(selectProductsTotalPrice);
 
@@ -76,11 +72,13 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
     };
   };
 
+
   // +1 item do carrinho
   const handleMoreProduct = (product) => {
     dispatch(moreProductToCart(product.id));
   };
 
+  
   // -1 item do carrinho
   const handleLessProduct = (product) => {
     // console.log(removeId)
@@ -141,6 +139,11 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                 <h3 className={style.titleCart}>Resumo do Pedido</h3>
                 <hr className={style.line} />
                 <div className={style.productList}>
+                    <tr className={style.productCartHead}>
+                      <th>Qtd</th>
+                      <th>Produto</th>
+                      <th>Preço/un</th>
+                    </tr>
                   <ul>
                     {products
                       ? products.map((product) => (

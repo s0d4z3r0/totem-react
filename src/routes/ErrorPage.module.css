@@ -1,11 +1,15 @@
 /* Mobile S */
-.home {
+.errorPage {
   margin: 0 auto;
-  width: 98%;
-  height: 45rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 2%;
+  background-color: var(--color-primary);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .logo {
   display: flex;
@@ -18,7 +22,9 @@
 .text {
   text-align: center;
   color: var(--color-white);
-  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .text h3 {
   font-family: var(--font-primary);
@@ -37,10 +43,6 @@
 
 /* Mobile M and L*/
 @media (min-width: 375px) {
-  .home {
-    height: 45rem;
-    justify-content: space-around;
-  }
   .logo img {
     width: 15rem;
   }
@@ -58,15 +60,8 @@
 }
 /* Tablet */
 @media (min-width: 765px) {
-  .home {
-    height: 45.5rem;
-    justify-content: space-around;
-  }
-  .logo {
-    margin-bottom: -3rem;
-  }
   .logo img {
-    width: 28rem;
+    width: 22rem;
   }
   .text h3 {
     font-size: 3rem;
@@ -77,10 +72,6 @@
 }
 /* Laptop L */
 @media (min-width: 1440px) {
-  .home {
-    height: 45.5rem;
-    justify-content: space-around;
-  }
   .logo img {
     width: 28rem;
   }
@@ -97,9 +88,6 @@
 }
 /* 4k screen */
 @media (min-width: 2560px) {
-  .home {
-    height: 45.5rem;
-  }
   .logo img {
     width: 28rem;
   }

@@ -21,6 +21,8 @@
   border: 1px solid var(--color-quaternary);
   position: relative;
   overflow: hidden;
+  animation-name: popUp;
+  animation-duration: 1s;
 }
 .img {
   display: flex;
@@ -140,6 +142,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding-top: 1rem;
+  animation-name: popUp;
+  animation-duration: 1s;
 }
 .close {
   position: absolute;
@@ -175,6 +179,17 @@
 }
 .productList ul li{
   list-style: none;
+}
+.productCartHead {
+  border-radius: 5px;
+  margin-top: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  color: var(--color-tertiary);
 }
 .productCart {
   border-radius: 5px;
@@ -290,4 +305,20 @@
 .pay:hover {
   background-color: var(--color-black);
   color: var(--color-primary);
+}
+
+@keyframes popUp{
+  0%{
+      transform: scale(0.1);
+      opacity: 0;
+  }25%{
+      transform: scale(1.1);
+      opacity: 1;
+  }45%{
+      transform: scale(0.9);
+  }80%{
+      transform: scale(1);
+  }100%{
+      transform: scale(1);
+  }
 }

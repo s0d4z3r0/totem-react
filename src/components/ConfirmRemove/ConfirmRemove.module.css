@@ -22,6 +22,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation-name: popUp;
+    animation-duration: 0.5s;
 }
 .content_confirmRemove span {
     padding: 0rem .5rem;
@@ -90,5 +92,16 @@ button.button_remove:hover{
     100%{
         opacity: 0;
         display: none;
+    }
+}
+@keyframes popUp{
+    0%{
+        transform: scale(0.1);
+    }45%{
+        transform: scale(1.1);
+    }65%{
+        transform: scale(0.9);
+    }100%{
+        transform: scale(1);
     }
 }

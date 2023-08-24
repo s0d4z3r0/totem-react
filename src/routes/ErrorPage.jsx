@@ -25,7 +25,7 @@ const ErrorPage = () => {
 
   return (
     <div>
-      <div className={style.home}>
+      <div className={style.errorPage}>
         <div className={style.logo}>
           <img src={Logo} alt="logo" />
         </div>

@@ -13,14 +13,16 @@
 }
 .content_alert{
     border-radius: 5px 5px 5px 5px;
-    width: 90%;
-    height: 10%;
+    width: 18rem;
+    height: 5rem;
     background-color: #b9f7b8;
     border: 1px solid var(--color-confirm);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-name: popUp;
+    animation-duration: 0.5s;
 }
 .content_alert p {
     font-family: var(--font-secondary);
@@ -43,13 +45,13 @@
     0% {
         display: none;
         opacity: 0;
-    }
-    100% {
+    }100% {
         display: block;
         opacity: 1;
         backdrop-filter: blur(2px);
     }
 }
+
 @keyframes fadeOut{
     0%{
         display: block;
@@ -59,5 +61,17 @@
     100%{
         opacity: 0;
         display: none;
+    }
+}
+
+@keyframes popUp{
+    0%{
+        transform: scale(0.1);
+    }45%{
+        transform: scale(1.1);
+    }65%{
+        transform: scale(0.9);
+    }100%{
+        transform: scale(1);
     }
 }
