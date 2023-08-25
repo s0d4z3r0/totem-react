@@ -1,0 +1,79 @@
+.loading {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 1s normal;
+}
+.bg_loading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_loading {
+  border-radius: 5px 5px 5px 5px;
+  width: 14rem;
+  height: 8rem;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  animation-name: popUp;
+  animation-duration: 0.5s;
+  box-shadow: 0px 0px 20px var(--color-black);
+}
+.content_loading h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.custom_loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #fa8023 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 30%, #fa8023);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  65% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

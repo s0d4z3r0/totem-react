@@ -1,0 +1,155 @@
+.cartModal {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+}
+.bg_cartModal {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_cartModal {
+  border-radius: 5px 5px 5px 5px;
+  width: 16rem;
+  height: 16rem;
+  background-color: var(--color-quaternary);
+  border: 1px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1rem;
+  animation-name: popUp;
+  animation-duration: 1s;
+}
+.cart{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.close {
+  position: absolute;
+  color: var(--color-secondary);
+  font-size: 16pt;
+  padding: 0.1rem;
+  top: 0%;
+  right: 0%;
+  background-color: var(--color-primary);
+  display: flex;
+  border-radius: 0px 0px 0px 5px;
+  cursor: pointer;
+}
+.titleCart {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: normal;
+  color: var(--color-black);
+  font-size: 1.2rem;
+}
+.cart hr {
+  border-color: var(--color-black);
+  width: 50%;
+  margin: 0.3rem auto;
+}
+
+.selectPayForm{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.selectPayForm label{
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: 1rem;
+}
+.selectPayForm select{
+    height: 2rem;
+    width: 14.2rem;
+}
+
+.totalPriceAndPayButton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+}
+.totalPrice {
+  border-radius: 0px 0px 0px 5px;
+  display: flex;
+  padding-left: 0.2rem;
+  background-color: var(--color-secondary);
+}
+.totalPrice p {
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: var(--color-tertiary);
+  padding-left: 0.2rem;
+}
+.totalPrice p:nth-of-type(1) {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.8rem;
+}
+.totalPrice p:nth-of-type(2) {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+.totalPrice p:nth-of-type(3) {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  padding-right: 0.5rem;
+}
+.payButton {
+  width: 100%;
+  border-radius: 0px 0px 5px 0px;
+}
+.pay {
+  border: none;
+  padding: 0.4rem;
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0px 0px 5px 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.pay:hover {
+  background-color: var(--color-black);
+  color: var(--color-primary);
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

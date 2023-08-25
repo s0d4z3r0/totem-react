@@ -10,6 +10,7 @@ import { selectProductsTotalPrice } from "../../redux/cart/cart.selectors";
 import { useState } from "react";
 
 import ConfirmRemove from "../ConfirmRemove/ConfirmRemove";
+import PayForm from "../PayForm/PayForm";
 
 const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
   {
@@ -17,6 +18,8 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
   }
   // Abre o Confirm para remover o item do cart
   const [confirmRemove, setConfirmRemove] = useState(false);
+  // Abre o Modal para escolher a forma de pagamento
+  const [choosePayForm, setChoosePayForm] = useState(false);
 
   // Ao clicar no ícone 'x' ou fora do modal, fechar o modal
   const handleModal = (e) => {
@@ -42,12 +45,17 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
     }
   };
 
+  // Abrir modal para forma de pagamento
+  const handleChoosePayForm = () => {
+    setChoosePayForm(!choosePayForm);
+  };
+
   {
     /* ---------------------- FUNÇÕES REDUCER ------------------------------------- */
   }
   const dispatch = useDispatch();
   // Resposta para remover ou não
-  const [removeId, setRemoveId] = useState('')
+  const [removeId, setRemoveId] = useState("");
   // Resgatar o products do reducer
   const { products } = useSelector((rootReducer) => rootReducer.cartReducer);
   // Resgatar o valor total do reducer
@@ -72,13 +80,11 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
     };
   };
 
-
   // +1 item do carrinho
   const handleMoreProduct = (product) => {
     dispatch(moreProductToCart(product.id));
   };
 
-  
   // -1 item do carrinho
   const handleLessProduct = (product) => {
     // console.log(removeId)
@@ -100,6 +106,11 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
         />
       ) : (
         ""
+      )}
+      {choosePayForm ? (
+        <PayForm setChoosePayForm={setChoosePayForm}/>
+      ) : (
+        ''
       )}
       {item ? (
         // MODAL ITEM
@@ -139,11 +150,11 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                 <h3 className={style.titleCart}>Resumo do Pedido</h3>
                 <hr className={style.line} />
                 <div className={style.productList}>
-                    <tr className={style.productCartHead}>
-                      <th>Qtd</th>
-                      <th>Produto</th>
-                      <th>Preço/un</th>
-                    </tr>
+                  <tr className={style.productCartHead}>
+                    <th>Qtd</th>
+                    <th>Produto</th>
+                    <th>Preço/un</th>
+                  </tr>
                   <ul>
                     {products
                       ? products.map((product) => (
@@ -153,8 +164,8 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                                 <i
                                   className="bi bi-dash-circle"
                                   onClick={() => {
-                                    setRemoveId(product.id)
-                                    handleLessProduct(product)
+                                    setRemoveId(product.id);
+                                    handleLessProduct(product);
                                   }}
                                 ></i>
                                 <input
@@ -189,7 +200,12 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                   <p>{productsTotalPrice.toFixed(2).replace(".", ",")}</p>
                 </div>
                 <div className={style.payButton}>
-                  <button className={style.pay}>Pagar</button>
+                  <button
+                    className={style.pay}
+                    onClick={() => handleChoosePayForm()}
+                  >
+                    Pagar
+                  </button>
                 </div>
               </div>
             </div>
