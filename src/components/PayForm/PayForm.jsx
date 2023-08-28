@@ -25,7 +25,7 @@ const PayForm = ({ setChoosePayForm }) => {
     console.log(payForm);
 
     if (payForm != "debit" && payForm != "credit") {
-      console.log("Opção inválida");
+      return
     } else {
       setOpenLoading(!openLoading);
 
@@ -40,13 +40,13 @@ const PayForm = ({ setChoosePayForm }) => {
   };
 
   return (
-    <div className={style.cartModal}>
+    <div className={style.payForm}>
       {openLoading ? <Loading /> : ""}
-      <div className={style.bg_cartModal} onClick={handleChoosePayForm}>
-        <div className={style.content_cartModal}>
-          <div className={style.cart}>
+      <div className={style.bg_payForm} onClick={handleChoosePayForm}>
+        <div className={style.content_payForm}>
+          <div className={style.box_payForm}>
             <i className={`${style.close} + bi bi-x`}></i>
-            <h3 className={style.titleCart}>Forma de Pagamento</h3>
+            <h3 className={style.titlePayForm}>Forma de Pagamento</h3>
             <hr className={style.line} />
 
             <form className={style.selectPayForm}>
@@ -57,7 +57,7 @@ const PayForm = ({ setChoosePayForm }) => {
                 value={payForm}
                 onChange={(e) => setPayForm(e.target.value)}
               >
-                <option value="" disabled>
+                <option value="" >
                   Forma de pagamento...
                 </option>
                 <option value="debit">Débito</option>

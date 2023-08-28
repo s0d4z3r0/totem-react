@@ -8,20 +8,19 @@
     background-color: var(--color-primary);
 }
 .cart{
-    padding-top: .8rem;
-    height: 4rem;
+    width: 50px;
+    height: 50px;
     text-align: center;
     position: fixed;
-    bottom: .5rem;
+    bottom: 1rem;
 }
 .circle{
     width: 1.2rem;
     position: absolute;
     right: 0rem;
-    top: 0;
     background-color: var(--color-cancel);
     border-radius: 50%;
-    border: 1px solid var(--color-cancel);
+    border: 1px solid var(--color-red);
 }
 .circle p{
     font-family: var(--font-secondary);
@@ -35,9 +34,12 @@
     font-size: 2rem;
     color: var(--color-black);
     border-radius: 50%;
-    padding: 0.5rem;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     box-shadow: 0px 0px 0px 5px var(--color-black);
+    padding-top: .3rem;
 }
 .cart i:hover{
     background-color: var(--color-quaternary);

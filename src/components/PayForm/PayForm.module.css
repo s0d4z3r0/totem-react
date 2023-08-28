@@ -1,18 +1,18 @@
-.cartModal {
+.payForm {
   position: fixed;
   top: 0;
   z-index: 1001;
   width: 100%;
   height: 100%;
 }
-.bg_cartModal {
+.bg_payForm {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content_cartModal {
+.content_payForm {
   border-radius: 5px 5px 5px 5px;
   width: 16rem;
   height: 16rem;
@@ -27,7 +27,7 @@
   animation-name: popUp;
   animation-duration: 1s;
 }
-.cart{
+.box_payForm{
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -45,14 +45,14 @@
   border-radius: 0px 0px 0px 5px;
   cursor: pointer;
 }
-.titleCart {
+.titlePayForm {
   text-align: center;
   font-family: var(--font-primary);
   font-weight: normal;
   color: var(--color-black);
   font-size: 1.2rem;
 }
-.cart hr {
+.box_payForm hr {
   border-color: var(--color-black);
   width: 50%;
   margin: 0.3rem auto;
