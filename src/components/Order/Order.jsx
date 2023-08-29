@@ -1,11 +1,14 @@
 import { useDispatch } from "react-redux";
 import style from "./Order.module.css";
 import { clearCart } from "../../redux/cart/actions";
+import { useNavigate } from "react-router-dom";
 
 const Order = ({setOrder, setChoosePayForm, setCartShow}) => {
   const orderNumber = Math.floor(Math.random() * 999);
 
   const dispatch = useDispatch()
+
+  const navigate = useNavigate()
 
 
   const handleCloseOrder = (e) => {
@@ -24,6 +27,7 @@ const Order = ({setOrder, setChoosePayForm, setCartShow}) => {
       dispatch(clearCart())
 
       // Redirecionar para a Home
+      navigate('/totem-react')
     }
   };
   
