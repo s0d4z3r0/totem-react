@@ -6,6 +6,7 @@
     height: 100%;
 }
 .bg_confirmRemove{
+    background-color: rgba(0, 0, 0, .3);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -14,9 +15,9 @@
 .content_confirmRemove{
     border-radius: 5px 5px 5px 5px;
     width: 90%;
-    height: 15%;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-black);
+    height: 8rem;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-primary);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -26,11 +27,11 @@
     animation-duration: 0.5s;
 }
 .content_confirmRemove span {
-    padding: 0rem .5rem;
+    padding: .5rem .5rem 0rem .5rem;
     font-family: var(--font-secondary);
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--color-black);
+    color: var(--color-primary);
 }
 .content_buttons{
     border-radius: 0px 0px 5px 5px;
@@ -43,11 +44,13 @@
     font-size: 1.1rem;
     font-weight: bold;
     border: none;
+    border-top: 1px solid var(--color-primary);
 }
 button.button_cancel{
-    background-color: #bbb;
+    background-color: var(--color-black);
     color: var(--color-white);
     cursor: pointer;
+    border-right: 1px solid var(--color-primary);
 }
 button.button_remove{
     background-color: var(--color-cancel);
@@ -56,10 +59,10 @@ button.button_remove{
 }
 
 button.button_cancel:hover{
-    background-color: #aaa;
+    background-color: var(--color-gray);
 }
 button.button_remove:hover{
-    background-color: #da2f14;
+    background-color: #a72410;
 }
 .confirmRemoveOpen{
     display: block;

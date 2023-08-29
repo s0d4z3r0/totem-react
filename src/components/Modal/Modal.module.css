@@ -191,6 +191,13 @@
   font-family: var(--font-secondary);
   color: var(--color-tertiary);
 }
+.productCartHead tbody{
+  width: 100%;
+}
+.productCartHead tbody tr{
+  display: flex;
+  justify-content: space-between;
+}
 .productCart {
   border-radius: 5px;
   margin-top: 0.3rem;

@@ -12,6 +12,8 @@ import MenuItens from "../components/MenuItens/MenuItens";
 import CardsItens from "../components/CardsItens/CardsItens";
 import Modal from "../components/Modal/Modal";
 import Alert from "../components/Alert/Alert";
+import PayForm from "../components/PayForm/PayForm";
+import Order from "../components/Order/Order";
 
 // Imagens
 import Burger1 from "../img/burger-carousel1.png";
@@ -26,13 +28,15 @@ const Menu = () => {
   const [searchHideShow, setSearchHideShow] = useState(false);
   // Input do component Search
   const [searchItem, setSearchItem] = useState("");
-  // Abrir modal
+  // Abrir modal do Item, do Carrinho, da Forma de Pagamento e da Order.
   const [modal, setModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
+  const [choosePayForm, setChoosePayForm] = useState(false);
+  const [order, setOrder] = useState(false)
   // State do item clicado
   const [item, setItem] = useState("");
   // Abre o Alert confirmando adição no cart
-  const [alertConfirm, setAlertConfirm] = useState(false);
+  const [alertConfirm, setAlertConfirm] = useState(false);  
 
   // Setando Ref para clicar e ir para a seção correta
   const burgersRef = useRef(null);
@@ -208,11 +212,17 @@ const Menu = () => {
         ""
       )}
       {cartShow ? (
-        <Modal setCartShow={setCartShow} />
+        <Modal setCartShow={setCartShow} setChoosePayForm={setChoosePayForm}/>
       ) : (
         ""
       )}
       <Alert alertConfirm={alertConfirm} />
+      {choosePayForm ? (
+        <PayForm setChoosePayForm={setChoosePayForm} setOrder={setOrder}/>
+      ) : (
+        ''
+      )}
+      {order ? (<Order setOrder={setOrder} setChoosePayForm={setChoosePayForm} setCartShow={setCartShow}/>) : ('')}
       <div className={style.navbar}>
         <Navbar setSearchHideShow={setSearchHideShow} />
         <MenuItens handleSetLinkItem={handleSetLinkItem} />

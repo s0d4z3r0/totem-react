@@ -33,6 +33,7 @@ const cartReducer = (state = initialState, action) => {
         products: [...state.products, { ...action.payload, quantity: 1 }],
       };
     }
+
     /* ============================= Remover Produto ============================== */
     case CartActionTypes.REMOVE_PRODUCT:
       return {
@@ -52,6 +53,7 @@ const cartReducer = (state = initialState, action) => {
             : product
         ),
       };
+
     /* ============================= Diminuir -1 Produto ============================== */
     case CartActionTypes.LESS_PRODUCT:
       return {
@@ -62,6 +64,14 @@ const cartReducer = (state = initialState, action) => {
             : product
         ),
       };
+
+    /* ============================= Limpar Carrinho ============================== */
+    case CartActionTypes.CLEAR_CART:
+      return {
+        ...state,
+        products: [],
+      };
+
     default:
       return state;
   }

@@ -1,0 +1,128 @@
+.order {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+}
+.bg_order {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_order {
+  border-radius: 5px 5px 5px 5px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--color-black);
+  border: 2px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+  animation-name: popUp;
+  animation-duration: 1s;
+  color: var(--color-white);
+}
+i.close {
+  position: absolute;
+  color: var(--color-black);
+  font-size: 16pt;
+  padding: 0.1rem;
+  top: 0%;
+  right: 0%;
+  background-color: var(--color-primary);
+  display: flex;
+  border-radius: 0px 0px 0px 5px;
+  cursor: pointer;
+}
+.orderApproved {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: var(--font-secondary);
+  padding: 1rem;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #2cb32a;
+  animation-name: popUpApproved;
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+}
+.circle i {
+  font-size: 3rem;
+  animation-name: popUpApproved;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+}
+.title h4 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.order_text {
+  font-size: 1rem;
+}
+.orderNumber {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
+}
+.orderNumber h4 {
+  font-size: 1.5rem;
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+}
+.orderNumber span {
+  color: var(--color-primary);
+  font-size: 3rem;
+  padding: 0rem 0.8rem;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popUpApproved {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(2);
+  }
+  45% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

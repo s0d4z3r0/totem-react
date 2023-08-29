@@ -10,16 +10,13 @@ import { selectProductsTotalPrice } from "../../redux/cart/cart.selectors";
 import { useState } from "react";
 
 import ConfirmRemove from "../ConfirmRemove/ConfirmRemove";
-import PayForm from "../PayForm/PayForm";
 
-const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
+const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm }) => {
   {
     /* ---------------------- FUNÇÕES CSS ------------------------------------- */
   }
   // Abre o Confirm para remover o item do cart
   const [confirmRemove, setConfirmRemove] = useState(false);
-  // Abre o Modal para escolher a forma de pagamento
-  const [choosePayForm, setChoosePayForm] = useState(false);
 
   // Ao clicar no ícone 'x' ou fora do modal, fechar o modal
   const handleModal = (e) => {
@@ -46,8 +43,12 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
   };
 
   // Abrir modal para forma de pagamento
-  const handleChoosePayForm = () => {
-    setChoosePayForm(!choosePayForm);
+  const handleChoosePayForm = (productsTotalPrice) => {
+    if (productsTotalPrice <= 0){
+      return
+    }else{
+      setChoosePayForm(choosePayForm => !choosePayForm);
+    }
   };
 
   {
@@ -87,7 +88,6 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
 
   // -1 item do carrinho
   const handleLessProduct = (product) => {
-    // console.log(removeId)
     if (product.quantity >= 2) {
       dispatch(lessProductFromCart(product.id));
     } else {
@@ -106,11 +106,6 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
         />
       ) : (
         ""
-      )}
-      {choosePayForm ? (
-        <PayForm setChoosePayForm={setChoosePayForm}/>
-      ) : (
-        ''
       )}
       {item ? (
         // MODAL ITEM
@@ -150,11 +145,15 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                 <h3 className={style.titleCart}>Resumo do Pedido</h3>
                 <hr className={style.line} />
                 <div className={style.productList}>
-                  <tr className={style.productCartHead}>
-                    <th>Qtd</th>
-                    <th>Produto</th>
-                    <th>Preço/un</th>
-                  </tr>
+                  <table className={style.productCartHead}>
+                    <tbody>
+                      <tr>
+                        <th>Qtd</th>
+                        <th>Produto</th>
+                        <th>Preço/un</th>
+                      </tr>
+                    </tbody>
+                  </table>
                   <ul>
                     {products
                       ? products.map((product) => (
@@ -202,7 +201,7 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm }) => {
                 <div className={style.payButton}>
                   <button
                     className={style.pay}
-                    onClick={() => handleChoosePayForm()}
+                    onClick={() => handleChoosePayForm(productsTotalPrice)}
                   >
                     Pagar
                   </button>
