@@ -179,7 +179,7 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
                                 ></i>
                               </div>
                               <div className={style.nameProduct}>
-                                <p>{product.name}</p>
+                                <p>{product.name.toLowerCase()}</p>
                               </div>
                               <div className={style.priceProduct}>
                                 <p>R$</p>
