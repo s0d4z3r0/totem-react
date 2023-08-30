@@ -22,6 +22,7 @@ import Burger3 from "../img/burger-carousel3.png";
 import Fries1 from "../img/fritas-bg1.png";
 import Drink1 from "../img/bebida-bg1.png";
 import Dessert1 from "../img/sorvete-bg1.png";
+import Footer from "../components/Footer/Footer";
 
 const Menu = () => {
   // Abrir ou fechar o input do Search
@@ -293,6 +294,7 @@ const Menu = () => {
       <div className={style.cart}>
         <Cart setCartShow={setCartShow} />
       </div>
+      <Footer/>
     </div>
   );
 };

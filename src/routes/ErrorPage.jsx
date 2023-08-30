@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./ErrorPage.module.css";
 import Logo from "../img/burger-logo-vector.png";
 import { useEffect, useState } from "react";
+import Footer from '../components/Footer/Footer'
 
 const ErrorPage = () => {
   const [seconds, setSeconds] = useState(10);
@@ -41,6 +42,7 @@ const ErrorPage = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

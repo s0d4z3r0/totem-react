@@ -1,0 +1,22 @@
+.footer{
+    position: fixed;
+    z-index: 100001;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-secondary);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.4rem;
+}
+.footer a span{
+    vertical-align: middle;
+    color: var(--color-quaternary);
+}
+a{
+    text-decoration: none;
+    color: var(--color-quaternary);
+}
+a:hover{
+    color: var(--color-primary);
+}

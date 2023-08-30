@@ -1,6 +1,7 @@
 import style from './Home.module.css'
 import Logo from '../img/burger-logo-vector.png'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           <Link to="/totem-react/menu">FAZER PEDIDO</Link>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
