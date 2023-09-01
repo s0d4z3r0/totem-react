@@ -1,24 +1,37 @@
 /* Mobile S */
 .errorPage {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  gap: 2%;
+  justify-content: space-evenly;
   background-color: var(--color-primary);
   position: absolute;
   width: 100%;
   height: 100%;
+  padding-bottom: 15%;
 }
 .logo {
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .logo img {
   padding-left: .5rem;
-  width: 6rem;
+  width: 10rem;
+}
+.imgErro{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  opacity: .05;
+
+}
+.imgErro img{
+  width: 100%;
 }
 .text {
+  z-index: 2;
   text-align: center;
   color: var(--color-white);
   display: flex;
@@ -31,9 +44,6 @@
   font-weight: 100;
   font-size: 1rem;
 }
-.text img{
-  width: 2rem;
-}
 .text p {
   font-family: var(--font-secondary);
   font-size: .8rem;
@@ -45,66 +55,169 @@
 
 /* Mobile S*/
 @media (min-width: 320px){
-
+  .errorPage{
+  justify-content: space-evenly;
+  }
+  .logo img {
+    width: 10rem;
+  }
+  .text h3 {
+    font-size: 1rem;
+  }
+  .text p {
+    padding: 0rem 1rem;
+    font-size: .9rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 320px){
-
+  .logo img {
+    width: 10rem;
+  }
+  .text h3 {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 375px){
-
+  .logo img {
+    width: 12rem;
+  }
+  .text h3 {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 425px){
-
+  .logo img {
+    width: 14rem;
+  }
+  .text p {
+    padding: 0rem 2rem;
+    font-size: 1rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 596px){
-
+  .logo img {
+    width: 16rem;
+  }
+  .text p {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 768px){
-
+  .logo img {
+    width: 18rem;
+  }
+  .text h3 {
+    font-size: 2.5rem;
+  }
+  .text p {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 320px) and (min-height: 1024px){
-
+  .logo img {
+    width: 20rem;
+  }
+  .text h3 {
+    font-size: 3rem;
+  }
+  .text p {
+    padding: 0rem 1rem;
+    font-size: 1.8rem;
+  }
 }
 
 /* Mobile M*/
 @media (min-width: 375px){
   .logo img {
-    width: 15rem;
-  }
-  .text{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    width: 10rem;
   }
   .text h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  .text p {
+    font-size: .9rem;
+  }
+}
+@media (min-width: 375px) and (min-height: 320px){
+  .logo img {
+    width: 12rem;
   }
   .text p {
     font-size: 1rem;
   }
 }
-@media (min-width: 375px) and (min-height: 320px){
-
-}
 @media (min-width: 375px) and (min-height: 375px){
-
+  .logo img {
+    width: 14rem;
+  }
+  .text h3 {
+    font-size: 1.8rem;
+  }
+  .text p {
+    font-size: 1.1rem;
+  }
 }
 @media (min-width: 375px) and (min-height: 425px){
-
+  .logo img {
+    width: 15rem;
+  }
+  .text h3 {
+    font-size: 2rem;
+  }
+  .text p {
+    padding: 0rem 3rem;
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 375px) and (min-height: 596px){
-
+  .logo img {
+    width: 18rem;
+  }
+  .text h3 {
+    font-size: 2.2rem;
+  }
+  .text p {
+    padding: 0rem 1rem;
+    font-size: 1.3rem;
+  }
 }
 @media (min-width: 375px) and (min-height: 768px){
-
+  .logo img {
+    width: 20rem;
+  }
+  .text h3 {
+    font-size: 2.6rem;
+  }
+  .text p {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 375px) and (min-height: 1024px){
-
+  .logo img {
+    width: 22rem;
+  }
+  .text h3 {
+    font-size: 3rem;
+  }
+  .text p {
+    font-size: 1.8rem;
+  }
 }
 
 /* Mobile L*/
 @media (min-width: 425px){
-
+  .errorPage{
+  padding-bottom: 10%;
+  }
+  .logo img {
+    width: 11rem;
+  }
+  .text h3 {
+    font-size: 1.5rem;
+  }
+  .text p {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 425px) and (min-height: 320px){
 
@@ -113,52 +226,140 @@
 
 }
 @media (min-width: 425px) and (min-height: 425px){
-
+  .logo img {
+    width: 16rem;
+  }
+  .text h3 {
+    font-size: 2rem;
+  }
+  .text p {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 425px) and (min-height: 596px){
-
+  .logo img {
+    width: 20rem;
+  }
+  .text h3 {
+    font-size: 2.2rem;
+  }
+  .text p {
+    padding: 0rem 1.5rem;
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 425px) and (min-height: 768px){
-
+  .logo img {
+    width: 22rem;
+  }
+  .text p {
+    padding: 0rem 1rem;
+  }
 }
 @media (min-width: 425px) and (min-height: 1024px){
-
+  .logo img {
+    width: 26rem;
+  }
+  .text h3 {
+    font-size: 2.6rem;
+  }
+  .text p {
+    padding: 0rem 1.5rem;
+    font-size: 2rem;
+  }
 }
 
 /* Tablet*/
 @media (min-width: 768px){
+  .errorPage{
+    padding-bottom: 5%;
+    }
   .logo img {
-    width: 22rem;
+    width: 10rem;
   }
   .text h3 {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
   .text p {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 768px) and (min-height: 320px){
-
+  .logo img {
+    width: 14rem;
+  }
+  .text h3 {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 768px) and (min-height: 375px){
-
+  .logo img {
+    width: 16rem;
+  }
+  .text h3 {
+    font-size: 2.2rem;
+  }
+  .text p {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 768px) and (min-height: 425px){
 
 }
 @media (min-width: 768px) and (min-height: 596px){
-
+  .logo img {
+    width: 20rem;
+  }
+  .text h3 {
+    font-size: 2.4rem;
+  }
+  .text p {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 768px) and (min-height: 768px){
-
+  .logo img {
+    width: 26rem;
+  }
+  .text h3 {
+    font-size: 2.6rem;
+  }
+  .text p {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 768px) and (min-height: 1024px){
-
+  .logo img {
+    width: 28rem;
+  }
+  .text h3 {
+    font-size: 2.8rem;
+  }
+  .text p {
+    font-size: 2.2rem;
+  }
 }
 
 /* Laptop */
 @media (min-width: 1024px){
-
+  .errorPage {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .imgErro img{
+    width: 20%;
+  }
+  .logo img {
+    width: 18rem;
+  }
+  .text h3 {
+    font-size: 2.2rem;
+  }
+  .text p {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1024px) and (min-height: 320px){
 
@@ -167,85 +368,247 @@
 
 }
 @media (min-width: 1024px) and (min-height: 425px){
-
+  .errorPage {
+    flex-direction: column;
+  }
+  .imgErro img{
+    width: 40%;
+  }
+  .logo img {
+    width: 18rem;
+  }
+  .text h3 {
+    font-size: 2.2rem;
+  }
+  .text p {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1024px) and (min-height: 596px){
-
+  .imgErro img{
+    width: 60%;
+  }
+  .logo img {
+    padding-left: 2.1rem;
+    width: 26rem;
+  }
+  .text h3 {
+    font-size: 2.6rem;
+  }
+  .text p {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 1024px) and (min-height: 768px){
-
+  .imgErro img{
+    width: 80%;
+  }
+  .logo img {
+    width: 36rem;
+  }
+  .text h3 {
+    font-size: 3.6rem;
+  }
+  .text p {
+    font-size: 2.2rem;
+  }
 }
 @media (min-width: 1024px) and (min-height: 1024px){
-
+  .imgErro img{
+    width: 100%;
+  }
+  .logo img {
+    width: 42rem;
+  }
+  .text h3 {
+    font-size: 3.8rem;
+  }
+  .text p {
+    font-size: 2.6rem;
+  }
 }
 
 /* Laptop L */
 @media (min-width: 1440px){
+  .errorPage{
+    padding-bottom: 3%;
+  }
   .logo img {
-    width: 28rem;
+    width: 22rem;
+  }
+  .imgErro img{
+    width: 15%;
   }
   .text h3 {
-    font-size: 3rem;
+    font-size: 2.6rem;
+  }
+  .text p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1440px) and (min-height: 320px){
+  .logo img {
+    width: 24rem;
+  }
+  .imgErro img{
+    width: 20%;
+  }
+  .text h3 {
+    font-size: 2.8rem;
   }
   .text p {
     font-size: 2rem;
   }
-  .btn a {
-    border-radius: 75px;
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1440px) and (min-height: 320px){
-
 }
 @media (min-width: 1440px) and (min-height: 375px){
-
+  .logo img {
+    width: 26rem;
+  }
+  .imgErro img{
+    width: 25%;
+  }
 }
 @media (min-width: 1440px) and (min-height: 425px){
-
+  .logo img {
+    width: 22rem;
+  }
+  .imgErro img{
+    width: 35%;
+  }
+  .text h3 {
+    font-size: 2rem;
+  }
+  .text p {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1440px) and (min-height: 596px){
-
+  .logo img {
+    width: 26rem;
+  }
+  .imgErro img{
+    width: 35%;
+  }
+  .text h3 {
+    font-size: 3.6rem;
+  }
+  .text p {
+    font-size: 2.2rem;
+  }
 }
 @media (min-width: 1440px) and (min-height: 768px){
-
+  .logo img {
+    width: 32rem;
+  }
+  .imgErro img{
+    width: 45%;
+  }
 }
 @media (min-width: 1440px) and (min-height: 1024px){
-
+  .logo img {
+    width: 42rem;
+  }
+  .imgErro img{
+    width: 65%;
+  }
+  .text h3 {
+    font-size: 4.2rem;
+  }
+  .text p {
+    font-size: 3.2rem;
+  }
 }
 
 /* 4K - 2560px */
 @media (min-width: 2560px){
+  .errorPage {
+    padding-bottom: 2.5%;
+  }
   .logo img {
-    width: 28rem;
+    width: 26rem;
+  }
+  .imgErro img{
+    width: 60%;
   }
   .text h3 {
     font-size: 4rem;
   }
   .text p {
-    margin-top: -3.5rem;
-    font-size: 3rem;
-  }
-  .btn a {
-    border-radius: 75px;
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 2560px) and (min-height: 320px){
-
+  .logo img {
+    width: 28rem;
+  }
+  .imgErro img{
+    width: 50%;
+  }
+  .text h3 {
+    font-size: 4.2rem;
+  }
+  .text p {
+    font-size: 2.4rem;
+  }
 }
 @media (min-width: 2560px) and (min-height: 375px){
-
+  .logo img {
+    width: 30rem;
+  }
+  .imgErro img{
+    width: 50%;
+  }
+  .text h3 {
+    font-size: 4.2rem;
+  }
+  .text p {
+    font-size: 2.8rem;
+  }
 }
 @media (min-width: 2560px) and (min-height: 425px){
-
+  .errorPage {
+    flex-direction: row;
+  }
+  .logo img {
+    width: 34rem;
+  }
+  .imgErro img{
+    width: 42%;
+  }
+  .text h3 {
+    font-size: 6rem;
+  }
 }
 @media (min-width: 2560px) and (min-height: 596px){
-
+  .logo img {
+    width: 44rem;
+  }
+  .imgErro img{
+    width: 55%;
+  }
 }
 @media (min-width: 2560px) and (min-height: 768px){
-
+  .logo img {
+    width: 52rem;
+  }
+  .imgErro img{
+    width: 60%;
+  }
+  .text h3 {
+    font-size: 7.2rem;
+  }
+  .text p {
+    font-size: 3.8rem;
+  }
 }
 @media (min-width: 2560px) and (min-height: 1024px){
-
+  .errorPage {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 42rem;
+  }
+  .imgErro img{
+    width: 60%;
+  }
 }
