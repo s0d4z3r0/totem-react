@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import style from "./Cart.module.css";
+import style from "./CartBar.module.css";
 import { selectProductsCount } from "../../redux/cart/cart.selectors";
 
-const Cart = ({ setCartShow }) => {
+const CartBar = ({ setCartShow }) => {
   // Abrir carrinho
   const handleOpenCart = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Cart = ({ setCartShow }) => {
             <p>{productsQtyTotal}</p>
           </div>
         ) : (
-          ""
+          ''
         )}
         <i className="bi bi-cart4" onClick={handleOpenCart}></i>
       </div>
@@ -30,4 +30,4 @@ const Cart = ({ setCartShow }) => {
   );
 };
 
-export default Cart;
+export default CartBar;

@@ -1,14 +1,21 @@
 import style from "./Modal.module.css";
 
+// Imagens
+import EmptyCart from '../../assets/carrinho-vazio.png'
+
+// Hooks
+import { useState } from "react";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import {
   addProductToCart,
   lessProductFromCart,
   moreProductToCart,
 } from "../../redux/cart/actions";
-import { selectProductsTotalPrice } from "../../redux/cart/cart.selectors";
-import { useState } from "react";
+import { selectProductsCount, selectProductsTotalPrice } from "../../redux/cart/cart.selectors";
 
+// Components
 import ConfirmRemove from "../ConfirmRemove/ConfirmRemove";
 
 const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm }) => {
@@ -61,6 +68,8 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
   const { products } = useSelector((rootReducer) => rootReducer.cartReducer);
   // Resgatar o valor total do reducer
   const productsTotalPrice = useSelector(selectProductsTotalPrice);
+  // Quantidades de itens no carrinho
+  const productsQtyTotal = useSelector(selectProductsCount)
 
   // Adiciona o item ao carrinho e abre Alerta de 'Item adicionado'
   const handleAddProduct = (e) => {
@@ -188,7 +197,13 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
                             </div>
                           </li>
                         ))
-                      : ""}
+                      : ('')}
+                      {productsQtyTotal === 0 ? (
+                          <div className={style.emptyCart}>
+                            <img src={EmptyCart} alt="Empty Cart" />
+                            <p>Seu carrinho está vazio.</p>
+                          </div>
+                        ) : ('')}
                   </ul>
                 </div>
               </div>

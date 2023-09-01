@@ -5,7 +5,7 @@ import style from "./Menu.module.css";
 import { useRef, useState } from "react";
 
 // Components
-import Cart from "../components/Cart/Cart";
+import CartBar from "../components/CartBar/CartBar";
 import Navbar from "../components/Navbar/Navbar";
 import Search from "../components/Search/Search";
 import MenuItens from "../components/MenuItens/MenuItens";
@@ -292,7 +292,7 @@ const Menu = () => {
         </section>
       </div>
       <div className={style.cart}>
-        <Cart setCartShow={setCartShow} />
+        <CartBar setCartShow={setCartShow} />
       </div>
       <Footer/>
     </div>
