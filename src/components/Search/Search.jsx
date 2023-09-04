@@ -12,7 +12,7 @@ const Search = ({ searchHideShow, setSearchItem }) => {
   return (
     <div
       className={`${style.search} + ${
-        searchHideShow ? style.show : style.none
+        searchHideShow ? style.show : style.hide
       }`}
     >
       <form onSubmit={(e) => e.preventDefault()}>

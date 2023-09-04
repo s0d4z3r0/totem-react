@@ -225,7 +225,7 @@ const Menu = () => {
       )}
       {order ? (<Order setOrder={setOrder} setChoosePayForm={setChoosePayForm} setCartShow={setCartShow}/>) : ('')}
       <div className={style.navbar}>
-        <Navbar setSearchHideShow={setSearchHideShow} />
+        <Navbar setSearchHideShow={setSearchHideShow}/>
         <MenuItens handleSetLinkItem={handleSetLinkItem} />
         <Search searchHideShow={searchHideShow} setSearchItem={setSearchItem} />
       </div>

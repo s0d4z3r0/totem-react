@@ -2,16 +2,22 @@
     z-index: -1;
     background-color: var(--color-black);
     width: 100%;
-    margin-top: 6.3rem;
+    margin-top: 5rem;
     padding-bottom: 2.5rem;
     overflow-y: scroll;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .menu::-webkit-scrollbar{
     display: none;
 }
 .burgers h2, .fries h2, .drinks h2, .desserts h2{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: .2rem 0rem;
     font-family: var(--font-handwriting);
     color: var(--color-quaternary);
     background-color: var(--color-gray);
@@ -19,27 +25,191 @@
     display: flex;
     justify-content: center;
 }
- /* Mobile M and L*/
- @media (min-width: 375px) {
 
-  }
-  /* Mobile M and L*/
-  @media (min-width: 375px) and (min-height: 844px) {
+/* Mobile S*/
+@media (min-width: 320px){
+}
+@media (min-width: 320px) and (min-height: 320px){
 
-  }
-  /* Tablet */
-  @media (min-width: 765px) {
+}
+@media (min-width: 320px) and (min-height: 375px){
 
-  }
-  /* Tablet */
-  @media (min-width: 765px) and (min-height: 1368px) {
+}
+@media (min-width: 320px) and (min-height: 425px){
 
-  }
-  /* Laptop L */
-  @media (min-width: 1440px) {
+}
+@media (min-width: 320px) and (min-height: 596px){
 
-  }
-  /* 4k screen */
-  @media (min-width: 2560px) {
+}
+@media (min-width: 320px) and (min-height: 768px){
 
-  }
+}
+@media (min-width: 320px) and (min-height: 1024px){
+
+}
+
+/* Mobile M*/
+@media (min-width: 375px){
+
+}
+@media (min-width: 375px) and (min-height: 320px){
+
+}
+@media (min-width: 375px) and (min-height: 375px){
+
+}
+@media (min-width: 375px) and (min-height: 425px){
+    .burgers h2, .fries h2, .drinks h2, .desserts h2{
+        padding: .5rem 0rem;
+    }
+    .menu{
+        margin-top: 6rem;
+    }
+}
+@media (min-width: 375px) and (min-height: 596px){
+
+}
+@media (min-width: 375px) and (min-height: 768px){
+
+}
+@media (min-width: 375px) and (min-height: 1024px){
+
+}
+
+/* Mobile L*/
+@media (min-width: 425px){
+
+}
+@media (min-width: 596px){
+    .burgers h2, .fries h2, .drinks h2, .desserts h2{
+        padding: 1rem 0rem;
+    }
+    .menu{
+        margin-top: 5.6rem;
+    }
+}
+@media (min-width: 596px) and (min-height: 425px){
+    .menu{
+        margin-top: 6.2rem;
+    }
+}
+@media (min-width: 425px) and (min-height: 320px){
+
+}
+@media (min-width: 425px) and (min-height: 375px){
+
+}
+@media (min-width: 425px) and (min-height: 425px){
+
+}
+@media (min-width: 425px) and (min-height: 596px){
+
+}
+@media (min-width: 425px) and (min-height: 768px){
+
+}
+@media (min-width: 425px) and (min-height: 1024px){
+
+}
+
+/* Tablet*/
+@media (min-width: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 320px){
+
+}
+@media (min-width: 768px) and (min-height: 375px){
+
+}
+@media (min-width: 768px) and (min-height: 425px){
+
+}
+@media (min-width: 768px) and (min-height: 596px){
+
+}
+@media (min-width: 768px) and (min-height: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 1024px){
+
+}
+
+/* Laptop */
+@media (min-width: 1024px){
+    .menu{
+        margin-top: 5.6rem;
+    }
+}
+@media (min-width: 1024px) and (min-height: 320px){
+
+}
+@media (min-width: 1024px) and (min-height: 375px){
+
+}
+@media (min-width: 1024px) and (min-height: 425px){
+    .menu{
+        margin-top: 7.2rem;
+    }
+}
+@media (min-width: 1024px) and (min-height: 596px){
+
+}
+@media (min-width: 1024px) and (min-height: 768px){
+
+}
+@media (min-width: 1024px) and (min-height: 1024px){
+
+}
+
+/* Laptop L */
+@media (min-width: 1440px){
+
+}
+@media (min-width: 1440px) and (min-height: 320px){
+
+}
+@media (min-width: 1440px) and (min-height: 375px){
+
+}
+@media (min-width: 1440px) and (min-height: 425px){
+
+}
+@media (min-width: 1440px) and (min-height: 596px){
+
+}
+@media (min-width: 1440px) and (min-height: 768px){
+    .burgers h2, .fries h2, .drinks h2, .desserts h2{
+        padding: 1rem 0rem;
+        font-size: 2.5rem;
+    }
+    .menu{
+        margin-top: 8.4rem;
+    }
+}
+@media (min-width: 1440px) and (min-height: 1024px){
+
+}
+
+/* 4K - 2560px */
+@media (min-width: 2560px){
+
+}
+@media (min-width: 2560px) and (min-height: 320px){
+
+}
+@media (min-width: 2560px) and (min-height: 375px){
+
+}
+@media (min-width: 2560px) and (min-height: 425px){
+
+}
+@media (min-width: 2560px) and (min-height: 596px){
+
+}
+@media (min-width: 2560px) and (min-height: 768px){
+
+}
+@media (min-width: 2560px) and (min-height: 1024px){
+
+}
