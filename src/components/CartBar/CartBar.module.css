@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 3.5rem;
+    height: 3rem;
     /* height: 2.5rem; */
     display: flex;
     justify-content: center;
@@ -14,13 +14,13 @@
     height: 50px;
     text-align: center;
     position: fixed;
-    bottom: 2rem;
+    bottom: 1.2rem;
     /* bottom: 1rem; */
 }
 .circle{
-    width: 1.2rem;
+    width: .8rem;
     position: absolute;
-    right: 0rem;
+    right: .5rem;
     background-color: var(--color-cancel);
     border-radius: 50%;
     border: 1px solid var(--color-red);
@@ -28,20 +28,20 @@
 .circle p{
     font-family: var(--font-secondary);
     font-weight: bold;
-    line-height: 1.1rem;
+    line-height: .8rem;
     color: var(--color-white);
-    font-size: .7rem;
+    font-size: .5rem;
 }
 .cart i{
     background-color: var(--color-primary);
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--color-black);
     border-radius: 50%;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    box-shadow: 0px 0px 0px 5px var(--color-black);
+    box-shadow: 0px 0px 0px 3px var(--color-black);
     padding-top: .3rem;
 }
 .cart i:hover{
@@ -79,7 +79,52 @@
 
 /* Mobile M*/
 @media (min-width: 375px){
-
+    .cartBar{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 3.5rem;
+        /* height: 2.5rem; */
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-primary);
+        border-top: 5px solid var(--color-black);
+    }
+    .cart{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        bottom: 2rem;
+        /* bottom: 1rem; */
+    }
+    .circle{
+        width: 1.2rem;
+        position: absolute;
+        right: 0rem;
+        background-color: var(--color-cancel);
+        border-radius: 50%;
+        border: 1px solid var(--color-red);
+    }
+    .circle p{
+        font-family: var(--font-secondary);
+        font-weight: bold;
+        line-height: 1.1rem;
+        color: var(--color-white);
+        font-size: .7rem;
+    }
+    .cart i{
+        background-color: var(--color-primary);
+        font-size: 2rem;
+        color: var(--color-black);
+        border-radius: 50%;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 5px var(--color-black);
+        padding-top: .3rem;
+    }
 }
 @media (min-width: 375px) and (min-height: 320px){
 

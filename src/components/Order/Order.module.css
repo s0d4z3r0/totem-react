@@ -11,11 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1rem;
 }
 .content_order {
   border-radius: 5px 5px 5px 5px;
-  width: 80%;
-  height: 80%;
+  width: 14rem;
+  height: 14rem;
   background-color: var(--color-black);
   border: 2px solid var(--color-primary);
   position: relative;
@@ -49,8 +50,8 @@ i.close {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   margin: 0 auto;
   background-color: #2cb32a;
@@ -59,17 +60,22 @@ i.close {
   animation-delay: 0.1s;
 }
 .circle i {
-  font-size: 3rem;
+  font-size: 1rem;
   animation-name: popUpApproved;
   animation-duration: 0.8s;
   animation-delay: 0.2s;
 }
+.orderApproved hr{
+  margin: 0 auto;
+  width: 11rem;
+  margin-bottom: 0.2rem;
+}
 .title h4 {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 .order_text {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 .orderNumber {
   display: flex;
@@ -77,14 +83,14 @@ i.close {
   line-height: 2.5rem;
 }
 .orderNumber h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--color-tertiary);
   text-transform: uppercase;
 }
 .orderNumber span {
   color: var(--color-primary);
-  font-size: 3rem;
-  padding: 0rem 0.8rem;
+  font-size: 1.2rem;
+  padding: 0rem 0.2rem;
 }
 
 @keyframes popUp {
@@ -125,4 +131,267 @@ i.close {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Mobile S*/
+@media (min-width: 320px){
+
+}
+@media (min-width: 320px) and (min-height: 320px){
+
+}
+@media (min-width: 320px) and (min-height: 375px){
+
+}
+@media (min-width: 320px) and (min-height: 425px){
+  .bg_order {
+    margin-top: 0rem;
+  }
+  .content_order {
+    height: 65vh;
+  }
+}
+@media (min-width: 320px) and (min-height: 596px){
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+  .circle i {
+    font-size: 1.5rem;
+  }
+  .content_order {
+    height: 23rem;
+  }
+}
+@media (min-width: 320px) and (min-height: 768px){
+}
+@media (min-width: 320px) and (min-height: 1024px){
+
+}
+
+/* Mobile M*/
+@media (min-width: 375px){
+
+}
+@media (min-width: 375px) and (min-height: 320px){
+
+}
+@media (min-width: 375px) and (min-height: 375px){
+
+}
+@media (min-width: 375px) and (min-height: 425px){
+  .bg_order {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 375px) and (min-height: 596px){
+  .order {
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+  }
+  .bg_order {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content_order {
+    border-radius: 5px 5px 5px 5px;
+    width: 19rem;
+    height: 29.8rem;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    animation-name: popUp;
+    animation-duration: 1s;
+    color: var(--color-white);
+  }
+  i.close {
+    position: absolute;
+    color: var(--color-black);
+    font-size: 16pt;
+    padding: 0.1rem;
+    top: 0%;
+    right: 0%;
+    background-color: var(--color-primary);
+    display: flex;
+    border-radius: 0px 0px 0px 5px;
+    cursor: pointer;
+  }
+  .orderApproved {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: var(--font-secondary);
+    padding: 1rem;
+  }
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #2cb32a;
+    animation-name: popUpApproved;
+    animation-duration: 0.9s;
+    animation-delay: 0.1s;
+  }
+  .circle i {
+    font-size: 3rem;
+    animation-name: popUpApproved;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+  }
+  .title h4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .order_text {
+    font-size: 1rem;
+  }
+  .orderNumber {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+  }
+  .orderNumber h4 {
+    font-size: 1.5rem;
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+  }
+  .orderNumber span {
+    color: var(--color-primary);
+    font-size: 3rem;
+    padding: 0rem 0.8rem;
+  }
+}
+@media (min-width: 375px) and (min-height: 768px){
+
+}
+@media (min-width: 375px) and (min-height: 1024px){
+
+}
+
+/* Mobile L*/
+@media (min-width: 425px){
+
+}
+@media (min-width: 425px) and (min-height: 320px){
+
+}
+@media (min-width: 425px) and (min-height: 375px){
+
+}
+@media (min-width: 425px) and (min-height: 425px){
+
+}
+@media (min-width: 425px) and (min-height: 596px){
+
+}
+@media (min-width: 425px) and (min-height: 768px){
+
+}
+@media (min-width: 425px) and (min-height: 1024px){
+
+}
+
+/* Tablet*/
+@media (min-width: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 320px){
+
+}
+@media (min-width: 768px) and (min-height: 375px){
+
+}
+@media (min-width: 768px) and (min-height: 425px){
+
+}
+@media (min-width: 768px) and (min-height: 596px){
+
+}
+@media (min-width: 768px) and (min-height: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 1024px){
+
+}
+
+/* Laptop */
+@media (min-width: 1024px){
+
+}
+@media (min-width: 1024px) and (min-height: 320px){
+
+}
+@media (min-width: 1024px) and (min-height: 375px){
+
+}
+@media (min-width: 1024px) and (min-height: 425px){
+
+}
+@media (min-width: 1024px) and (min-height: 596px){
+
+}
+@media (min-width: 1024px) and (min-height: 768px){
+
+}
+@media (min-width: 1024px) and (min-height: 1024px){
+
+}
+
+/* Laptop L */
+@media (min-width: 1440px){
+
+}
+@media (min-width: 1440px) and (min-height: 320px){
+
+}
+@media (min-width: 1440px) and (min-height: 375px){
+
+}
+@media (min-width: 1440px) and (min-height: 425px){
+
+}
+@media (min-width: 1440px) and (min-height: 596px){
+
+}
+@media (min-width: 1440px) and (min-height: 768px){
+
+}
+@media (min-width: 1440px) and (min-height: 1024px){
+
+}
+
+/* 4K - 2560px */
+@media (min-width: 2560px){
+
+}
+@media (min-width: 2560px) and (min-height: 320px){
+
+}
+@media (min-width: 2560px) and (min-height: 375px){
+
+}
+@media (min-width: 2560px) and (min-height: 425px){
+
+}
+@media (min-width: 2560px) and (min-height: 596px){
+
+}
+@media (min-width: 2560px) and (min-height: 768px){
+
+}
+@media (min-width: 2560px) and (min-height: 1024px){
+
 }

@@ -124,19 +124,25 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
               <div className={style.item}>
                 <div className={style.img}>
                   <img src={item.image} alt="" />
-                  <i className={`${style.close} + bi bi-x`}></i>
                 </div>
+
+                  <i className={`${style.close} + bi bi-x`}></i>
+
                 <div className={style.name}>
                   <h3>{item.name}</h3>
                 </div>
+
                 <hr className={style.line} />
+
                 <div className={style.description}>
                   <p>{item.description}</p>
                 </div>
+
                 <div className={style.price}>
                   <p>R$</p>
-                  <h3>{item.price.toFixed(2).replace(".", ",")}</h3>
+                  <p>{item.price.toFixed(2).replace(".", ",")}</p>
                 </div>
+                
                 <button className={style.add} onClick={handleAddProduct}>
                   Adicionar
                 </button>
@@ -198,20 +204,20 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
                           </li>
                         ))
                       : ('')}
+                  </ul>
                       {productsQtyTotal === 0 ? (
                           <div className={style.emptyCart}>
                             <img src={EmptyCart} alt="Empty Cart" />
                             <p>Seu carrinho está vazio.</p>
                           </div>
                         ) : ('')}
-                  </ul>
                 </div>
               </div>
               <div className={style.totalPriceAndPayButton}>
                 <div className={style.totalPrice}>
-                  <p>TOTAL</p>
-                  <p>R$</p>
-                  <p>{productsTotalPrice.toFixed(2).replace(".", ",")}</p>
+                    <p>TOTAL</p>
+                    <p>R$</p>
+                    <p>{productsTotalPrice.toFixed(2).replace(".", ",")}</p>
                 </div>
                 <div className={style.payButton}>
                   <button

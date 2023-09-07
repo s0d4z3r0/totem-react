@@ -1,6 +1,6 @@
 .itens {
   color: var(--color-white);
-  padding: 1.5rem 0.8rem;
+  padding: .5rem 0.8rem;
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
@@ -15,16 +15,19 @@
 .text h4 {
   text-transform: uppercase;
   color: var(--color-tertiary);
+  font-size: .8rem;
 }
 .text p:first-of-type {
-  width: 18rem;
+  width: 15rem;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: .8rem;
 }
 .text p:last-of-type {
   color: var(--color-tertiary);
+  font-size: .8rem;
 }
 .img {
   display: flex;

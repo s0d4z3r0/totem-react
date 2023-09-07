@@ -11,11 +11,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -1rem;
 }
 .content_confirmRemove{
     border-radius: 5px 5px 5px 5px;
-    width: 90%;
-    height: 8rem;
+    width: 13rem;
+    height: 5rem;
     background-color: var(--color-black);
     border: 1px solid var(--color-primary);
     position: relative;
@@ -29,7 +30,7 @@
 .content_confirmRemove span {
     padding: .5rem .5rem 0rem .5rem;
     font-family: var(--font-secondary);
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: bold;
     color: var(--color-primary);
 }
@@ -39,9 +40,9 @@
     grid-template-columns: 50% 50%;
 }
 .content_buttons button{
-    padding: .3rem 0rem;
+    padding: .2rem 0rem;
     font-family: var(--font-secondary);
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: bold;
     border: none;
     border-top: 1px solid var(--color-primary);
@@ -107,4 +108,184 @@ button.button_remove:hover{
     }100%{
         transform: scale(1);
     }
+}
+
+/* Mobile S*/
+@media (min-width: 320px){
+
+}
+@media (min-width: 320px) and (min-height: 320px){
+
+}
+@media (min-width: 320px) and (min-height: 375px){
+
+}
+@media (min-width: 320px) and (min-height: 425px){
+    .bg_confirmRemove{
+        margin-top: 0rem;
+    }
+}
+@media (min-width: 320px) and (min-height: 596px){
+
+}
+@media (min-width: 320px) and (min-height: 768px){
+
+}
+@media (min-width: 320px) and (min-height: 1024px){
+
+}
+
+/* Mobile M*/
+@media (min-width: 375px){
+    .content_confirmRemove{
+        width: 16rem;
+        height: 6rem;
+    }
+    .content_confirmRemove span {
+        font-size: .9rem;
+    }
+    .content_buttons button{
+        font-size: .9rem;
+    }
+}
+@media (min-width: 375px) and (min-height: 320px){
+
+}
+@media (min-width: 375px) and (min-height: 375px){
+
+}
+@media (min-width: 375px) and (min-height: 425px){
+    .bg_confirmRemove{
+        margin-top: 0rem;
+    }
+    .content_confirmRemove span {
+        font-size: 1rem;
+    }
+    .content_buttons button{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 375px) and (min-height: 596px){
+
+}
+@media (min-width: 375px) and (min-height: 768px){
+
+}
+@media (min-width: 375px) and (min-height: 1024px){
+
+}
+
+/* Mobile L*/
+@media (min-width: 425px){
+
+}
+@media (min-width: 425px) and (min-height: 320px){
+
+}
+@media (min-width: 425px) and (min-height: 375px){
+
+}
+@media (min-width: 425px) and (min-height: 425px){
+
+}
+@media (min-width: 425px) and (min-height: 596px){
+
+}
+@media (min-width: 425px) and (min-height: 768px){
+
+}
+@media (min-width: 425px) and (min-height: 1024px){
+
+}
+
+/* Tablet*/
+@media (min-width: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 320px){
+
+}
+@media (min-width: 768px) and (min-height: 375px){
+
+}
+@media (min-width: 768px) and (min-height: 425px){
+
+}
+@media (min-width: 768px) and (min-height: 596px){
+
+}
+@media (min-width: 768px) and (min-height: 768px){
+
+}
+@media (min-width: 768px) and (min-height: 1024px){
+
+}
+
+/* Laptop */
+@media (min-width: 1024px){
+
+}
+@media (min-width: 1024px) and (min-height: 320px){
+
+}
+@media (min-width: 1024px) and (min-height: 375px){
+
+}
+@media (min-width: 1024px) and (min-height: 425px){
+
+}
+@media (min-width: 1024px) and (min-height: 596px){
+
+}
+@media (min-width: 1024px) and (min-height: 768px){
+
+}
+@media (min-width: 1024px) and (min-height: 1024px){
+
+}
+
+/* Laptop L */
+@media (min-width: 1440px){
+
+}
+@media (min-width: 1440px) and (min-height: 320px){
+
+}
+@media (min-width: 1440px) and (min-height: 375px){
+
+}
+@media (min-width: 1440px) and (min-height: 425px){
+
+}
+@media (min-width: 1440px) and (min-height: 596px){
+
+}
+@media (min-width: 1440px) and (min-height: 768px){
+
+}
+@media (min-width: 1440px) and (min-height: 1024px){
+
+}
+
+/* 4K - 2560px */
+@media (min-width: 2560px){
+
+}
+@media (min-width: 2560px) and (min-height: 320px){
+
+}
+@media (min-width: 2560px) and (min-height: 375px){
+
+}
+@media (min-width: 2560px) and (min-height: 425px){
+
+}
+@media (min-width: 2560px) and (min-height: 596px){
+
+}
+@media (min-width: 2560px) and (min-height: 768px){
+
+}
+@media (min-width: 2560px) and (min-height: 1024px){
+
 }

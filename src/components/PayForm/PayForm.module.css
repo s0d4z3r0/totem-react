@@ -11,11 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1rem;
 }
 .content_payForm {
   border-radius: 5px 5px 5px 5px;
-  width: 16rem;
-  height: 16rem;
+  width: 14rem;
+  height: 13rem;
   background-color: var(--color-quaternary);
   border: 1px solid var(--color-primary);
   position: relative;
@@ -23,20 +24,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 1rem;
   animation-name: popUp;
   animation-duration: 1s;
 }
-.box_payForm{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around
+.box_payForm {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 0.5rem;
 }
 .close {
   position: absolute;
-  color: var(--color-secondary);
-  font-size: 16pt;
+  color: var(--color-black);
+  font-size: 1rem;
   padding: 0.1rem;
   top: 0%;
   right: 0%;
@@ -50,29 +51,38 @@
   font-family: var(--font-primary);
   font-weight: normal;
   color: var(--color-black);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 .box_payForm hr {
-  border-color: var(--color-black);
-  width: 50%;
+  border: 1px solid var(--color-primary);
+  width: 8rem;
   margin: 0.3rem auto;
 }
 
-.selectPayForm{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.selectPayForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
-.selectPayForm label{
-    font-family: var(--font-secondary);
-    font-weight: bold;
-    font-size: 1rem;
+.selectPayForm label {
+  width: 11rem;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  font-size: .8rem;
 }
-.selectPayForm select{
-    height: 2rem;
-    width: 14.2rem;
+.selectPayForm select {
+  padding: .3rem;
+  width: 11rem;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+  font-family: var(--font-secondary);
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
 }
 
 .totalPriceAndPayButton {
@@ -82,36 +92,32 @@
   background-color: var(--color-secondary);
   border-radius: 0px 0px 5px 5px;
   display: flex;
+  height: 2rem;
 }
 .totalPrice {
   border-radius: 0px 0px 0px 5px;
   display: flex;
-  padding-left: 0.2rem;
   background-color: var(--color-secondary);
+  width: 14rem;
+  font-family: var(--font-secondary);
 }
 .totalPrice p {
   font-family: var(--font-secondary);
   font-weight: bold;
   color: var(--color-tertiary);
   padding-left: 0.2rem;
+  font-size: .6rem;
 }
-.totalPrice p:nth-of-type(1) {
-  display: flex;
-  align-items: flex-start;
-  font-size: 0.8rem;
-}
-.totalPrice p:nth-of-type(2) {
+.totalPrice p:nth-of-type(2){
   display: flex;
   align-items: flex-end;
-  font-size: 0.8rem;
-  padding-bottom: 0.4rem;
+  margin-bottom: .2rem;
 }
-.totalPrice p:nth-of-type(3) {
-  display: flex;
-  align-items: flex-end;
-  font-size: 1.8rem;
+.totalPrice p:nth-of-type(3){
+  font-size: 1.2rem;
   color: var(--color-primary);
-  padding-right: 0.5rem;
+  display: flex;
+  align-items: flex-end;
 }
 .payButton {
   width: 100%;
@@ -119,9 +125,10 @@
 }
 .pay {
   border: none;
-  padding: 0.4rem;
+  width: 100%;
+  padding: 0.3rem;
   font-family: var(--font-secondary);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 0px 0px 5px 0px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -133,7 +140,6 @@
   background-color: var(--color-black);
   color: var(--color-primary);
 }
-
 @keyframes popUp {
   0% {
     transform: scale(0.1);
@@ -152,4 +158,229 @@
   100% {
     transform: scale(1);
   }
+}
+
+/* Mobile S*/
+@media (min-width: 320px) {
+}
+@media (min-width: 320px) and (min-height: 320px) {
+}
+@media (min-width: 320px) and (min-height: 375px) {
+}
+@media (min-width: 320px) and (min-height: 425px) {
+  .bg_payForm {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 320px) and (min-height: 596px) {
+}
+@media (min-width: 320px) and (min-height: 768px) {
+}
+@media (min-width: 320px) and (min-height: 1024px) {
+}
+
+/* Mobile M*/
+@media (min-width: 375px) {
+  .titlePayForm {
+    font-size: 1.2rem;
+  }
+  .box_payForm hr {
+    width: 14rem;
+  }
+  .content_payForm {
+    width: 17rem;
+    height: 13rem;
+  }
+  .selectPayForm label {
+    font-size: .8rem;
+    width: 14rem;
+  }
+  .selectPayForm select {
+    width: 14.2rem;
+  }
+}
+@media (min-width: 375px) and (min-height: 320px) {
+  .selectPayForm label {
+    width: 14rem;
+    font-size: .9rem;
+  }
+  .selectPayForm select {
+    padding: .2rem;
+    width: 14rem;
+    font-size: .9rem;
+  }
+
+}
+@media (min-width: 375px) and (min-height: 375px) {
+}
+@media (min-width: 375px) and (min-height: 425px) {
+  .bg_payForm {
+    margin-top: 0rem;
+  }
+  .totalPrice p {
+    font-size: .6rem;
+  }
+  .totalPrice p:nth-of-type(2){
+    font-size: .7rem;
+  }
+  .totalPrice p:nth-of-type(3){
+    font-size: 1.2rem;
+  }
+  .pay {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+  }
+  .totalPriceAndPayButton {
+    height: 2.2rem;
+  }
+}
+
+@media (min-width: 375px) and (min-height: 596px) {
+  .content_payForm {
+    border-radius: 5px 5px 5px 5px;
+    width: 17rem;
+    height: 16rem;
+    background-color: var(--color-quaternary);
+    border: 1px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation-name: popUp;
+    animation-duration: 1s;
+  }
+  .box_payForm {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  i.close {
+    position: absolute;
+    color: var(--color-black);
+    font-size: 16pt;
+    padding: 0.1rem;
+    top: 0%;
+    right: 0%;
+    background-color: var(--color-primary);
+    display: flex;
+    border-radius: 0px 0px 0px 5px;
+    cursor: pointer;
+  }
+  .titlePayForm {
+    text-align: center;
+    font-family: var(--font-primary);
+    font-weight: normal;
+    color: var(--color-black);
+    font-size: 1.2rem;
+  }
+  .box_payForm hr {
+    border: 1px solid var(--color-primary);
+    width: 50%;
+    margin: 0.3rem auto;
+  }
+
+  .selectPayForm {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .selectPayForm label {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .selectPayForm select {
+    height: 2rem;
+    width: 14.2rem;
+  }
+
+
+}
+@media (min-width: 375px) and (min-height: 768px) {
+}
+@media (min-width: 375px) and (min-height: 1024px) {
+}
+
+/* Mobile L*/
+@media (min-width: 425px) {
+}
+@media (min-width: 425px) and (min-height: 320px) {
+}
+@media (min-width: 425px) and (min-height: 375px) {
+}
+@media (min-width: 425px) and (min-height: 425px) {
+}
+@media (min-width: 425px) and (min-height: 596px) {
+}
+@media (min-width: 425px) and (min-height: 768px) {
+}
+@media (min-width: 425px) and (min-height: 1024px) {
+}
+
+/* Tablet*/
+@media (min-width: 768px) {
+}
+@media (min-width: 768px) and (min-height: 320px) {
+}
+@media (min-width: 768px) and (min-height: 375px) {
+}
+@media (min-width: 768px) and (min-height: 425px) {
+}
+@media (min-width: 768px) and (min-height: 596px) {
+}
+@media (min-width: 768px) and (min-height: 768px) {
+}
+@media (min-width: 768px) and (min-height: 1024px) {
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+}
+@media (min-width: 1024px) and (min-height: 320px) {
+}
+@media (min-width: 1024px) and (min-height: 375px) {
+}
+@media (min-width: 1024px) and (min-height: 425px) {
+}
+@media (min-width: 1024px) and (min-height: 596px) {
+}
+@media (min-width: 1024px) and (min-height: 768px) {
+}
+@media (min-width: 1024px) and (min-height: 1024px) {
+}
+
+/* Laptop L */
+@media (min-width: 1440px) {
+}
+@media (min-width: 1440px) and (min-height: 320px) {
+}
+@media (min-width: 1440px) and (min-height: 375px) {
+}
+@media (min-width: 1440px) and (min-height: 425px) {
+}
+@media (min-width: 1440px) and (min-height: 596px) {
+}
+@media (min-width: 1440px) and (min-height: 768px) {
+}
+@media (min-width: 1440px) and (min-height: 1024px) {
+}
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+}
+@media (min-width: 2560px) and (min-height: 320px) {
+}
+@media (min-width: 2560px) and (min-height: 375px) {
+}
+@media (min-width: 2560px) and (min-height: 425px) {
+}
+@media (min-width: 2560px) and (min-height: 596px) {
+}
+@media (min-width: 2560px) and (min-height: 768px) {
+}
+@media (min-width: 2560px) and (min-height: 1024px) {
 }
