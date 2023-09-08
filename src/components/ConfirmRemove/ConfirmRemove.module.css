@@ -177,7 +177,17 @@ button.button_remove:hover{
 
 /* Mobile L*/
 @media (min-width: 425px){
-
+    
+    .content_confirmRemove{
+        width: 18rem;
+        height: 7rem;
+    }
+    .content_confirmRemove span {
+        font-size: 1rem;
+    }
+    .content_buttons button{
+        font-size: 1rem;
+    }
 }
 @media (min-width: 425px) and (min-height: 320px){
 

@@ -143,16 +143,25 @@
 
 /* Mobile L*/
 @media (min-width: 425px){
-
+    .content_alert{
+        width: 65%;
+        height: 23%;
+        margin-top: 0rem;
+    }
+    .content_alert p {
+        font-size: 1rem;
+    }
 }
 @media (min-width: 425px) and (min-height: 320px){
-
+    .content_alert{
+        width: 18rem;
+        height: 4rem;
+    }
 }
 @media (min-width: 425px) and (min-height: 375px){
 
 }
 @media (min-width: 425px) and (min-height: 425px){
-
 }
 @media (min-width: 425px) and (min-height: 596px){
 

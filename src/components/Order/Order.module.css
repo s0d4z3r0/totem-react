@@ -283,19 +283,48 @@ i.close {
 
 /* Mobile L*/
 @media (min-width: 425px){
-
+  .content_order {
+    width: 60%;
+    height: 80%;
+  }
 }
 @media (min-width: 425px) and (min-height: 320px){
 
 }
 @media (min-width: 425px) and (min-height: 375px){
-
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+  .circle i {
+    font-size: 2rem;
+  }
+  .orderApproved hr{
+    width: 13rem;
+  }
+  .title h4 {
+    font-size: 1.2rem;
+  }
+  .order_text {
+    font-size: 1rem;
+  }
+  .orderNumber h4 {
+    font-size: 1.2rem;
+  }
+  .orderNumber span {
+    font-size: 1.4rem;
+    padding: 0rem 0.2rem;
+  }
+  
 }
 @media (min-width: 425px) and (min-height: 425px){
 
 }
 @media (min-width: 425px) and (min-height: 596px){
-
+  .content_order {
+    width: 17rem;
+    height: 30rem;
+  }
 }
 @media (min-width: 425px) and (min-height: 768px){
 

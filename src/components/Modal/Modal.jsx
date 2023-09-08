@@ -159,7 +159,6 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
                 <i className={`${style.close} + bi bi-x`}></i>
                 <h3 className={style.titleCart}>Resumo do Pedido</h3>
                 <hr className={style.line} />
-                <div className={style.productList}>
                   <table className={style.productCartHead}>
                     <tbody>
                       <tr>
@@ -169,6 +168,7 @@ const Modal = ({ item, setModal, setCartShow, setAlertConfirm, setChoosePayForm 
                       </tr>
                     </tbody>
                   </table>
+                <div className={style.productList}>
                   <ul>
                     {products
                       ? products.map((product) => (
