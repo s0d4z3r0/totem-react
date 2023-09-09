@@ -7,13 +7,15 @@
   padding: 0.5rem 0;
   background-color: var(--color-black);
 }
-.return, .search {
+.return,
+.search {
   background-color: transparent;
   border: none;
   margin: 0 0.5rem;
   color: var(--color-primary);
 }
-.return i, .search i {
+.return i,
+.search i {
   font-size: 1rem;
   padding: 0.2rem;
   border-radius: 50px;
@@ -21,174 +23,30 @@
   cursor: pointer;
 }
 
-/* Mobile S*/
-@media (min-width: 320px){
-}
-@media (min-width: 320px) and (min-height: 320px){
-
-}
-@media (min-width: 320px) and (min-height: 375px){
-
-}
-@media (min-width: 320px) and (min-height: 425px){
-
-}
-@media (min-width: 320px) and (min-height: 596px){
-
-}
-@media (min-width: 320px) and (min-height: 768px){
-
-}
-@media (min-width: 320px) and (min-height: 1024px){
-
-}
-
 /* Mobile M*/
-@media (min-width: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 320px){
-
-}
-@media (min-width: 375px) and (min-height: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 425px){
-  .return i, .search i{
+@media (min-width: 375px) and (min-height: 425px) {
+  .return i,
+  .search i {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 375px) and (min-height: 596px){
-
-}
-@media (min-width: 375px) and (min-height: 768px){
-
-}
-@media (min-width: 375px) and (min-height: 1024px){
-
-}
-
-/* Mobile L*/
-@media (min-width: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 320px){
-
-}
-@media (min-width: 425px) and (min-height: 375px){
-
-}
-@media (min-width: 425px) and (min-height: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 596px){
-
-}
-@media (min-width: 425px) and (min-height: 768px){
-
-}
-@media (min-width: 425px) and (min-height: 1024px){
-
-}
-
-/* Tablet*/
-@media (min-width: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 320px){
-
-}
-@media (min-width: 768px) and (min-height: 375px){
-
-}
-@media (min-width: 768px) and (min-height: 425px){
-
-}
-@media (min-width: 768px) and (min-height: 596px){
-
-}
-@media (min-width: 768px) and (min-height: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 1024px){
-
-}
 
 /* Laptop */
-@media (min-width: 1024px){
-
-}
-@media (min-width: 1024px) and (min-height: 320px){
-
-}
-@media (min-width: 1024px) and (min-height: 375px){
-
-}
-@media (min-width: 1024px) and (min-height: 425px){
-  .return i{
+@media (min-width: 1024px) and (min-height: 425px) {
+  .return i {
     font-size: 2rem;
   }
-  .search i{
+  .search i {
     display: none;
   }
-}
-@media (min-width: 1024px) and (min-height: 596px){
-
-}
-@media (min-width: 1024px) and (min-height: 768px){
-
-}
-@media (min-width: 1024px) and (min-height: 1024px){
-
 }
 
 /* Laptop L */
-@media (min-width: 1440px){
-
-}
-@media (min-width: 1440px) and (min-height: 320px){
-
-}
-@media (min-width: 1440px) and (min-height: 375px){
-
-}
-@media (min-width: 1440px) and (min-height: 425px){
-
-}
-@media (min-width: 1440px) and (min-height: 596px){
-
-}
-@media (min-width: 1440px) and (min-height: 768px){
-  .return i{
+@media (min-width: 1440px) and (min-height: 768px) {
+  .return i {
     font-size: 2.4rem;
   }
-  .search i{
+  .search i {
     display: none;
   }
-}
-@media (min-width: 1440px) and (min-height: 1024px){
-
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px){
-
-}
-@media (min-width: 2560px) and (min-height: 320px){
-
-}
-@media (min-width: 2560px) and (min-height: 375px){
-
-}
-@media (min-width: 2560px) and (min-height: 425px){
-
-}
-@media (min-width: 2560px) and (min-height: 596px){
-
-}
-@media (min-width: 2560px) and (min-height: 768px){
-
-}
-@media (min-width: 2560px) and (min-height: 1024px){
-
 }

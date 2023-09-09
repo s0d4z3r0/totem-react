@@ -1,186 +1,30 @@
-.footer{
-    position: fixed;
-    z-index: 100001;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-family: var(--font-secondary);
-    background-color: var(--color-black);
-    color: var(--color-white);
-    line-height: 1.4rem;
-    font-size: .8rem;
+.footer {
+  position: fixed;
+  z-index: 100001;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-secondary);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  line-height: 1.4rem;
+  font-size: 0.8rem;
 }
-.footer a span{
-    vertical-align: middle;
-    color: var(--color-quaternary);
+.footer a span {
+  vertical-align: middle;
+  color: var(--color-quaternary);
 }
-a{
-    text-decoration: none;
-    color: var(--color-quaternary);
+a {
+  text-decoration: none;
+  color: var(--color-quaternary);
 }
-a:hover{
-    color: var(--color-primary);
+a:hover {
+  color: var(--color-primary);
 }
 
 /* Mobile S*/
-@media (min-width: 320px){
-    .footer{
-        font-size: 1rem;
-    }
-}
-@media (min-width: 320px) and (min-height: 320px){
-
-}
-@media (min-width: 320px) and (min-height: 375px){
-
-}
-@media (min-width: 320px) and (min-height: 425px){
-
-}
-@media (min-width: 320px) and (min-height: 596px){
-
-}
-@media (min-width: 320px) and (min-height: 768px){
-
-}
-@media (min-width: 320px) and (min-height: 1024px){
-
-}
-
-/* Mobile M*/
-@media (min-width: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 320px){
-
-}
-@media (min-width: 375px) and (min-height: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 425px){
-
-}
-@media (min-width: 375px) and (min-height: 596px){
-
-}
-@media (min-width: 375px) and (min-height: 768px){
-
-}
-@media (min-width: 375px) and (min-height: 1024px){
-
-}
-
-/* Mobile L*/
-@media (min-width: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 320px){
-
-}
-@media (min-width: 425px) and (min-height: 375px){
-
-}
-@media (min-width: 425px) and (min-height: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 596px){
-
-}
-@media (min-width: 425px) and (min-height: 768px){
-
-}
-@media (min-width: 425px) and (min-height: 1024px){
-
-}
-
-/* Tablet*/
-@media (min-width: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 320px){
-
-}
-@media (min-width: 768px) and (min-height: 375px){
-
-}
-@media (min-width: 768px) and (min-height: 425px){
-
-}
-@media (min-width: 768px) and (min-height: 596px){
-
-}
-@media (min-width: 768px) and (min-height: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 1024px){
-
-}
-
-/* Laptop */
-@media (min-width: 1024px){
-
-}
-@media (min-width: 1024px) and (min-height: 320px){
-
-}
-@media (min-width: 1024px) and (min-height: 375px){
-
-}
-@media (min-width: 1024px) and (min-height: 425px){
-
-}
-@media (min-width: 1024px) and (min-height: 596px){
-
-}
-@media (min-width: 1024px) and (min-height: 768px){
-
-}
-@media (min-width: 1024px) and (min-height: 1024px){
-
-}
-
-/* Laptop L */
-@media (min-width: 1440px){
-
-}
-@media (min-width: 1440px) and (min-height: 320px){
-
-}
-@media (min-width: 1440px) and (min-height: 375px){
-
-}
-@media (min-width: 1440px) and (min-height: 425px){
-
-}
-@media (min-width: 1440px) and (min-height: 596px){
-
-}
-@media (min-width: 1440px) and (min-height: 768px){
-
-}
-@media (min-width: 1440px) and (min-height: 1024px){
-
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px){
-
-}
-@media (min-width: 2560px) and (min-height: 320px){
-
-}
-@media (min-width: 2560px) and (min-height: 375px){
-
-}
-@media (min-width: 2560px) and (min-height: 425px){
-
-}
-@media (min-width: 2560px) and (min-height: 596px){
-
-}
-@media (min-width: 2560px) and (min-height: 768px){
-
-}
-@media (min-width: 2560px) and (min-height: 1024px){
-
+@media (min-width: 320px) {
+  .footer {
+    font-size: 1rem;
+  }
 }

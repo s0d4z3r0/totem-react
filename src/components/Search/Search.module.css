@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: .2rem 0rem;
+  padding: 0.2rem 0rem;
 }
 .search label {
   width: 100%;
@@ -40,11 +40,11 @@
   color: var(--color-primary);
 }
 .show {
-  animation: moveToDown .2s ease-in-out;
+  animation: moveToDown 0.2s ease-in-out;
   transform: translateY(0);
 }
 .hide {
-  animation: moveToUp .2s ease-in-out;
+  animation: moveToUp 0.2s ease-in-out;
   transform: translateY(-5rem);
 }
 
@@ -70,39 +70,8 @@
   }
 }
 
-/* Mobile S*/
-@media (min-width: 320px){
-}
-@media (min-width: 320px) and (min-height: 320px){
-
-}
-@media (min-width: 320px) and (min-height: 375px){
-
-}
-@media (min-width: 320px) and (min-height: 425px){
-
-}
-@media (min-width: 320px) and (min-height: 596px){
-
-}
-@media (min-width: 320px) and (min-height: 768px){
-
-}
-@media (min-width: 320px) and (min-height: 1024px){
-
-}
-
 /* Mobile M*/
-@media (min-width: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 320px){
-
-}
-@media (min-width: 375px) and (min-height: 375px){
-
-}
-@media (min-width: 375px) and (min-height: 425px){
+@media (min-width: 375px) and (min-height: 425px) {
   .search label {
     padding: 0.3rem 0;
   }
@@ -112,66 +81,10 @@
   .search input {
     font-size: 1.2rem;
   }
-}
-@media (min-width: 375px) and (min-height: 596px){
-
-}
-@media (min-width: 375px) and (min-height: 768px){
-
-}
-@media (min-width: 375px) and (min-height: 1024px){
-
-}
-
-/* Mobile L*/
-@media (min-width: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 320px){
-
-}
-@media (min-width: 425px) and (min-height: 375px){
-
-}
-@media (min-width: 425px) and (min-height: 425px){
-
-}
-@media (min-width: 425px) and (min-height: 596px){
-
-}
-@media (min-width: 425px) and (min-height: 768px){
-
-}
-@media (min-width: 425px) and (min-height: 1024px){
-
-}
-
-/* Tablet*/
-@media (min-width: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 320px){
-
-}
-@media (min-width: 768px) and (min-height: 375px){
-
-}
-@media (min-width: 768px) and (min-height: 425px){
-
-}
-@media (min-width: 768px) and (min-height: 596px){
-
-}
-@media (min-width: 768px) and (min-height: 768px){
-
-}
-@media (min-width: 768px) and (min-height: 1024px){
-
 }
 
 /* Laptop */
-@media (min-width: 1024px){
-
+@media (min-width: 1024px) {
   .search label {
     padding: 0.3rem 0;
   }
@@ -182,13 +95,7 @@
     font-size: 1rem;
   }
 }
-@media (min-width: 1024px) and (min-height: 320px){
-
-}
-@media (min-width: 1024px) and (min-height: 375px){
-
-}
-@media (min-width: 1024px) and (min-height: 425px){
+@media (min-width: 1024px) and (min-height: 425px) {
   .search {
     display: block;
     transform: translateY(0);
@@ -197,43 +104,25 @@
     width: 30%;
     right: 0;
   }
-  .search form{
+  .search form {
     justify-content: flex-end;
   }
   .search label {
     width: 100%;
     padding: 0.3rem 0;
   }
-.search i {
-  padding: 0rem 0.2rem;
-  font-size: 1.1rem;
-}
-.search input {
-  padding: 0rem .2rem;
-  font-size: 1.1rem;
-}
-}
-@media (min-width: 1024px) and (min-height: 596px){
-
-}
-@media (min-width: 1024px) and (min-height: 768px){
-
-}
-@media (min-width: 1024px) and (min-height: 1024px){
-
+  .search i {
+    padding: 0rem 0.2rem;
+    font-size: 1.1rem;
+  }
+  .search input {
+    padding: 0rem 0.2rem;
+    font-size: 1.1rem;
+  }
 }
 
 /* Laptop L */
-@media (min-width: 1440px){
-  
-}
-@media (min-width: 1440px) and (min-height: 320px){
-
-}
-@media (min-width: 1440px) and (min-height: 375px){
-
-}
-@media (min-width: 1440px) and (min-height: 425px){
+@media (min-width: 1440px) and (min-height: 425px) {
   .search {
     width: 30%;
   }
@@ -241,49 +130,20 @@
     width: 100%;
     padding: 0.3rem 0;
   }
-.search i {
-  padding: 0rem 0.2rem;
-  font-size: 1.1rem;
+  .search i {
+    padding: 0rem 0.2rem;
+    font-size: 1.1rem;
+  }
+  .search input {
+    padding: 0rem 0.2rem;
+    font-size: 1.1rem;
+  }
 }
-.search input {
-  padding: 0rem .2rem;
-  font-size: 1.1rem;
-}
-}
-@media (min-width: 1440px) and (min-height: 596px){
-
-}
-@media (min-width: 1440px) and (min-height: 768px){
+@media (min-width: 1440px) and (min-height: 768px) {
   .search i {
     font-size: 1.5rem;
   }
   .search input {
     font-size: 1.5rem;
   }
-}
-@media (min-width: 1440px) and (min-height: 1024px){
-
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px){
-
-}
-@media (min-width: 2560px) and (min-height: 320px){
-
-}
-@media (min-width: 2560px) and (min-height: 375px){
-
-}
-@media (min-width: 2560px) and (min-height: 425px){
-
-}
-@media (min-width: 2560px) and (min-height: 596px){
-
-}
-@media (min-width: 2560px) and (min-height: 768px){
-
-}
-@media (min-width: 2560px) and (min-height: 1024px){
-
 }
