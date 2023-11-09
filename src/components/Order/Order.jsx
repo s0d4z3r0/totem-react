@@ -27,7 +27,7 @@ const Order = ({setOrder, setChoosePayForm, setCartShow}) => {
       dispatch(clearCart())
 
       // Redirecionar para a Home
-      navigate('/totem-react')
+      navigate('/')
     }
   };
   

@@ -17,7 +17,7 @@ const ErrorPage = () => {
 
         if(seconds === 1){
             setSeconds(10)
-            return navigate('/totem-react')
+            return navigate('/')
         }
     }, 1000)
 

@@ -21,7 +21,7 @@ const Home = () => {
         </div>
 
         <div className={style.btn}>
-          <Link to="/totem-react/menu">FAZER PEDIDO</Link>
+          <Link to="/menu">FAZER PEDIDO</Link>
         </div>
         
       </div>

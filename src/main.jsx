@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 // Router
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 // Routes
 import App from './App'
@@ -16,18 +16,18 @@ import ErrorPage from './routes/ErrorPage'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App/>,
     errorElement: <ErrorPage/>,
     children: [
       {
-        path: 'totem-react',
+        path: '/',
         element: <Home/>
       },
       {
-        path: 'totem-react/menu',
+        path: '/menu',
         element: <Menu/>
       }
     ]
